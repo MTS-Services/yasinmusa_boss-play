@@ -22,5 +22,6 @@ class ImagePath {
   static const String sessionLobbyLitePinkContainer = '$baseUrl/session_lobby_lite_pink_container .png';
   static const String sessionLobbyPinkContainer = '$baseUrl/session_lobby_pink_container .png';
   static const String sessionLobbyYellowContainer = '$baseUrl/session_lobby_yellow_container .png';
+  static const String alex = '$baseUrl/alex.png';
 
 }
