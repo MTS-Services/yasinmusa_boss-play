@@ -1,6 +1,7 @@
 class ImagePath {
   static const String baseUrl ='assets/images';
   static const String arrowBack = '$baseUrl/arrow_back.png';
+  static const String googleLogo = '$baseUrl/google_logo.png';
   static const String selectScreen = '$baseUrl/select_screen.png';
   static const String blueContainerWelcome = '$baseUrl/blue_container_welcome.png';
   static const String createNewSessionContainer = '$baseUrl/create_new_session_container .png';
