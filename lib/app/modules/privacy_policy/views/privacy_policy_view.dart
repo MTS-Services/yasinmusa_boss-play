@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import '../controllers/restaurant_edited_controller.dart';
+import '../controllers/privacy_policy_controller.dart';
 
-class RestaurantEditedView extends GetView<RestaurantEditedController> {
-  const RestaurantEditedView({super.key});
+class PrivacyPolicyView extends GetView<PrivacyPolicyController> {
+  const PrivacyPolicyView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('RestaurantEditedView'),
+        title: const Text('PrivacyPolicyView'),
         centerTitle: true,
       ),
       body: const Center(
         child: Text(
-          'RestaurantEditedView is working',
+          'PrivacyPolicyView is working',
           style: TextStyle(fontSize: 20),
         ),
       ),
