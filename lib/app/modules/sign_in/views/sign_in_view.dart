@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:yasinmusa/app/data/app_colors.dart';
 import 'package:yasinmusa/app/data/app_text_styles.dart';
+import 'package:yasinmusa/app/data/image_path.dart';
 
 import '../../common_widgets/custom_text_field.dart';
 import '../controllers/sign_in_controller.dart';
@@ -62,12 +63,17 @@ class SignInView extends GetView<SignInController> {
                   ),
                 ),
                 Padding(
-                  padding:  EdgeInsets.symmetric(vertical: 32.h),
+                  padding: EdgeInsets.symmetric(vertical: 32.h),
                   child: Row(
                     children: [
-                      Expanded(child: Divider(color: AppColors.dividerColor, height: 1)),
+                      Expanded(
+                        child: Divider(
+                          color: AppColors.dividerColor,
+                          height: 1.h,
+                        ),
+                      ),
                       Padding(
-                        padding:  EdgeInsets.symmetric(horizontal: 8.w),
+                        padding: EdgeInsets.symmetric(horizontal: 8.w),
                         child: Text(
                           'Or',
                           style: AppTextStyles.regular16.copyWith(
@@ -75,7 +81,20 @@ class SignInView extends GetView<SignInController> {
                           ),
                         ),
                       ),
-                      Expanded(child: Divider(color: AppColors.dividerColor,height: 1,)),
+                      Expanded(
+                        child: Divider(
+                          color: AppColors.dividerColor,
+                          height: 1.h,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                OutlinedButton(
+                  onPressed: () {},
+                  child: Row(
+                    children: [
+                      // Image.asset(ImagePath.)
                     ],
                   ),
                 ),
