@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/edit_profile/bindings/edit_profile_binding.dart';
+import '../modules/edit_profile/views/edit_profile_view.dart';
 import '../modules/enter_new_password/bindings/enter_new_password_binding.dart';
 import '../modules/enter_new_password/views/enter_new_password_view.dart';
 import '../modules/forgot_enter_code/bindings/forgot_enter_code_binding.dart';
@@ -10,26 +12,30 @@ import '../modules/game_play/bindings/game_play_binding.dart';
 import '../modules/game_play/views/game_play_view.dart';
 import '../modules/game_result/bindings/game_result_binding.dart';
 import '../modules/game_result/views/game_result_view.dart';
+import '../modules/help_support/bindings/help_support_binding.dart';
+import '../modules/help_support/views/help_support_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
-import '../modules/sign_in/bindings/sign_in_binding.dart';
-import '../modules/sign_in/views/sign_in_view.dart';
-import '../modules/sign_up/bindings/sign_up_binding.dart';
-import '../modules/sign_up/views/sign_up_view.dart';
+import '../modules/notifications/bindings/notifications_binding.dart';
+import '../modules/notifications/views/notifications_view.dart';
+import '../modules/privacy_policy/bindings/privacy_policy_binding.dart';
+import '../modules/privacy_policy/views/privacy_policy_view.dart';
+import '../modules/profile/bindings/profile_binding.dart';
+import '../modules/profile/views/profile_view.dart';
+import '../modules/rating/bindings/rating_binding.dart';
+import '../modules/rating/views/rating_view.dart';
 import '../modules/registration_play_game/bindings/registration_play_game_binding.dart';
 import '../modules/registration_play_game/views/registration_play_game_view.dart';
+import '../modules/session_lobby/bindings/session_lobby_binding.dart';
+import '../modules/session_lobby/views/session_lobby_view.dart';
 import '../modules/sign_in/bindings/sign_in_binding.dart';
 import '../modules/sign_in/views/sign_in_view.dart';
 import '../modules/sign_in_enter_code/bindings/sign_in_enter_code_binding.dart';
 import '../modules/sign_in_enter_code/views/sign_in_enter_code_view.dart';
 import '../modules/sign_up/bindings/sign_up_binding.dart';
 import '../modules/sign_up/views/sign_up_view.dart';
-import '../modules/rating/bindings/rating_binding.dart';
-import '../modules/rating/views/rating_view.dart';
-import '../modules/restaurant_edited/bindings/restaurant_edited_binding.dart';
-import '../modules/restaurant_edited/views/restaurant_edited_view.dart';
-import '../modules/session_lobby/bindings/session_lobby_binding.dart';
-import '../modules/session_lobby/views/session_lobby_view.dart';
+import '../modules/terms_conditions/bindings/terms_conditions_binding.dart';
+import '../modules/terms_conditions/views/terms_conditions_view.dart';
 import '../modules/will_pay/bindings/will_pay_binding.dart';
 import '../modules/will_pay/views/will_pay_view.dart';
 
@@ -38,7 +44,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
+  static const INITIAL = Routes.GAME_RESULT;
 
   static final routes = [
     GetPage(
@@ -117,9 +123,34 @@ class AppPages {
       binding: RatingBinding(),
     ),
     GetPage(
-      name: _Paths.RESTAURANT_EDITED,
-      page: () => const RestaurantEditedView(),
-      binding: RestaurantEditedBinding(),
+      name: _Paths.NOTIFICATIONS,
+      page: () => const NotificationsView(),
+      binding: NotificationsBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROFILE,
+      page: () => const ProfileView(),
+      binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.EDIT_PROFILE,
+      page: () => const EditProfileView(),
+      binding: EditProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.PRIVACY_POLICY,
+      page: () => const PrivacyPolicyView(),
+      binding: PrivacyPolicyBinding(),
+    ),
+    GetPage(
+      name: _Paths.TERMS_CONDITIONS,
+      page: () => const TermsConditionsView(),
+      binding: TermsConditionsBinding(),
+    ),
+    GetPage(
+      name: _Paths.HELP_SUPPORT,
+      page: () => const HelpSupportView(),
+      binding: HelpSupportBinding(),
     ),
   ];
 }

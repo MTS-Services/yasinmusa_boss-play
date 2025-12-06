@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-
+import 'package:yasinmusa/app/data/app_colors.dart';
 import '../controllers/game_play_controller.dart';
 
 class GamePlayView extends GetView<GamePlayController> {
@@ -9,14 +9,10 @@ class GamePlayView extends GetView<GamePlayController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('GamePlayView'),
-        centerTitle: true,
-      ),
-      body: const Center(
+      body: Center(
         child: Text(
-          'GamePlayView is working',
-          style: TextStyle(fontSize: 20),
+          'Game Play screen ',
+          style: TextStyle(fontSize: 47.sp,color: AppColors.whiteColor,fontWeight: FontWeight.w500,),textAlign: TextAlign.center,
         ),
       ),
     );

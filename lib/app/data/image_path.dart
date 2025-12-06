@@ -1,44 +1,5 @@
 class ImagePath {
   static const String baseUrl ='assets/images';
-  static const String imageUrl = 'assets/images';
-  static const String iconUrl = 'assets/icons';
-  static const String homeIcon = '$iconUrl/home.png';
-  static const String historyIcon = '$iconUrl/history.png';
-  static const String profileIcon = '$iconUrl/profile.png';
-  static const String logOut = '$iconUrl/log-out.png';
-  static const String supportIcon = '$iconUrl/support.png';
-  static const String serviceIcon = '$iconUrl/service.png';
-  static const String paymentIcon = '$iconUrl/moneyIcon.png';
-  static const String facebook = '$iconUrl/facebook.png';
-  static const String google = '$iconUrl/google.png';
-  static const String finger = '$iconUrl/finger_icon.png';
-  static const String appleIcon = '$iconUrl/apple.png';
-  static const String fleetIcon = '$iconUrl/fleet.png';
-  static const String otpIcon = '$iconUrl/otp_icon.png';
-  static const String sucessIcon = '$iconUrl/sucess.png';
-  static const String editIcon = '$iconUrl/edit.png';
-  static const String fieldAgentType ='$baseUrl/field_agent_type.png';
-  static const String splash ='$baseUrl/splash.png';
-  static const String operatorType ='$baseUrl/operator_type.png';
-  static const String farmerPng ='$baseUrl/farmer.png';
-  static const String servicePng ='$baseUrl/service.png';
-  static const String calendarPng ='$baseUrl/calendar.png';
-  static const String timePng ='$baseUrl/time.png';
-  static const String arrowDown ='$baseUrl/arrow-down.png';
-  static const String payPng ='$baseUrl/payPng.png';
-  static const String stripePng ='$baseUrl/stripePng.png';
-  static const String cardPng ='$baseUrl/cardPng.png';
-  static const String googlePay ='$baseUrl/googlePng.png';
-  static const String mapPng ='$baseUrl/map.png';
-  static const String support ='$baseUrl/support.png';
-  static const String liveChat ='$baseUrl/liveChat.png';
-  static const String liveCall ='$baseUrl/liveCall.png';
-  static const String customerType ='$baseUrl/customer_type.png';
-  static const String login_logo ='$baseUrl/login_logo.png';
-  static const String person ='$baseUrl/person.jpg';
-  static const String languageIcon ='$iconUrl/languageIcon.png';
-  static const String loginLogo ='$baseUrl/login_logo.png';
-  static const String waitingImage ='$baseUrl/waiting_image.jpg';
-  static const String file ='$baseUrl/file.png';
-  static const String farmer ='$baseUrl/Farmer.png';
+  static const String arrowBack = '$baseUrl/arrow_back.png';
+
 }

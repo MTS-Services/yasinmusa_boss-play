@@ -582,7 +582,7 @@ abstract class AppTextStyles {
     fontFamily: 'SpaceGrotesk',
   );
 
-// ---------- 16 ----------
+  // ---------- 16 ----------
   static TextStyle get SpaceGroteskLight16 => TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeight.w300,
@@ -611,7 +611,7 @@ abstract class AppTextStyles {
     fontFamily: 'SpaceGrotesk',
   );
 
-// ---------- 20 ----------
+  // ---------- 20 ----------
   static TextStyle get SpaceGroteskLight20 => TextStyle(
     fontSize: 20.sp,
     fontWeight: FontWeight.w300,
@@ -640,7 +640,7 @@ abstract class AppTextStyles {
     fontFamily: 'SpaceGrotesk',
   );
 
-// ---------- 24 ----------
+  // ---------- 24 ----------
   static TextStyle get SpaceGroteskLight24 => TextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeight.w300,
@@ -669,7 +669,7 @@ abstract class AppTextStyles {
     fontFamily: 'SpaceGrotesk',
   );
 
-// ---------- 28 ----------
+  // ---------- 28 ----------
   static TextStyle get SpaceGroteskLight28 => TextStyle(
     fontSize: 28.sp,
     fontWeight: FontWeight.w300,
@@ -698,7 +698,7 @@ abstract class AppTextStyles {
     fontFamily: 'SpaceGrotesk',
   );
 
-// ---------- 32 ----------
+  // ---------- 32 ----------
   static TextStyle get SpaceGroteskLight32 => TextStyle(
     fontSize: 32.sp,
     fontWeight: FontWeight.w300,
@@ -727,7 +727,7 @@ abstract class AppTextStyles {
     fontFamily: 'SpaceGrotesk',
   );
 
-// ---------- 36 ----------
+  // ---------- 36 ----------
   static TextStyle get SpaceGroteskLight36 => TextStyle(
     fontSize: 36.sp,
     fontWeight: FontWeight.w300,
@@ -756,7 +756,7 @@ abstract class AppTextStyles {
     fontFamily: 'SpaceGrotesk',
   );
 
-// ---------- 40 ----------
+  // ---------- 40 ----------
   static TextStyle get SpaceGroteskLight40 => TextStyle(
     fontSize: 40.sp,
     fontWeight: FontWeight.w300,

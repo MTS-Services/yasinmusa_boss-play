@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:yasinmusa/app/data/app_text_styles.dart';
 
+import '../../common_widgets/custom_app_bar.dart';
 import '../controllers/game_result_controller.dart';
 
 class GameResultView extends GetView<GameResultController> {
@@ -9,14 +11,14 @@ class GameResultView extends GetView<GameResultController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('GameResultView'),
-        centerTitle: true,
+      appBar: CustomAppBar(
+        title: "Game Result",
+        subTitle: "Pizza Palace",
       ),
-      body: const Center(
+      body: Center(
         child: Text(
           'GameResultView is working',
-          style: TextStyle(fontSize: 20),
+          style: AppTextStyles.bold8,
         ),
       ),
     );
