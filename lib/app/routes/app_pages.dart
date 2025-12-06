@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-
 import '../modules/enter_new_password/bindings/enter_new_password_binding.dart';
 import '../modules/enter_new_password/views/enter_new_password_view.dart';
 import '../modules/forgot_enter_code/bindings/forgot_enter_code_binding.dart';
@@ -18,12 +17,8 @@ import '../modules/sign_up/bindings/sign_up_binding.dart';
 import '../modules/sign_up/views/sign_up_view.dart';
 import '../modules/registration_play_game/bindings/registration_play_game_binding.dart';
 import '../modules/registration_play_game/views/registration_play_game_view.dart';
-import '../modules/sign_in/bindings/sign_in_binding.dart';
-import '../modules/sign_in/views/sign_in_view.dart';
 import '../modules/sign_in_enter_code/bindings/sign_in_enter_code_binding.dart';
 import '../modules/sign_in_enter_code/views/sign_in_enter_code_view.dart';
-import '../modules/sign_up/bindings/sign_up_binding.dart';
-import '../modules/sign_up/views/sign_up_view.dart';
 import '../modules/rating/bindings/rating_binding.dart';
 import '../modules/rating/views/rating_view.dart';
 import '../modules/restaurant_edited/bindings/restaurant_edited_binding.dart';
