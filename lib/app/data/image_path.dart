@@ -1,7 +1,6 @@
 class ImagePath {
   static const String baseUrl ='assets/images';
   static const String arrowBack = '$baseUrl/arrow_back.png';
-
   static const String selectScreen = '$baseUrl/select_screen.png';
   static const String blueContainerWelcome = '$baseUrl/blue_container_welcome.png';
   static const String createNewSessionContainer = '$baseUrl/create_new_session_container .png';
@@ -23,5 +22,10 @@ class ImagePath {
   static const String sessionLobbyPinkContainer = '$baseUrl/session_lobby_pink_container .png';
   static const String sessionLobbyYellowContainer = '$baseUrl/session_lobby_yellow_container .png';
   static const String alex = '$baseUrl/alex.png';
-
+  static const String playAgain = '$baseUrl/play_again.png';
+  static const String homeIcon = '$baseUrl/home_icon.png';
+  static const String person = '$baseUrl/person.png';
+  static const String notification = '$baseUrl/notification.png';
+  static const String award = '$baseUrl/award.png';
+  static const String gift = '$baseUrl/gift.png';
 }
