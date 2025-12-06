@@ -6,7 +6,7 @@ import 'app_text_styles.dart';
 ThemeData themeData() {
   return ThemeData(
     // fontFamily: 'Poppins',
-    scaffoldBackgroundColor: AppColors.whiteColor,
+    scaffoldBackgroundColor: AppColors.blackColor,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: AppColors.whiteColor,
       elevation: 0,
@@ -15,7 +15,7 @@ ThemeData themeData() {
       selectedItemColor: AppColors.primaryColor,
     ),
     appBarTheme: AppBarTheme(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: AppColors.blackColor,
       iconTheme: IconThemeData(color: AppColors.whiteColor),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
