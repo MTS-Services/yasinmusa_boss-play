@@ -17,6 +17,7 @@ abstract class Routes {
   static const SESSION_LOBBY = _Paths.SESSION_LOBBY;
   static const RATING = _Paths.RATING;
   static const RESTAURANT_EDITED = _Paths.RESTAURANT_EDITED;
+
 }
 
 abstract class _Paths {
@@ -35,4 +36,5 @@ abstract class _Paths {
   static const SESSION_LOBBY = '/session-lobby';
   static const RATING = '/rating';
   static const RESTAURANT_EDITED = '/restaurant-edited';
+
 }

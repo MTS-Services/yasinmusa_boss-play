@@ -12,24 +12,26 @@ import '../modules/game_result/bindings/game_result_binding.dart';
 import '../modules/game_result/views/game_result_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
-import '../modules/sign_in/bindings/sign_in_binding.dart';
-import '../modules/sign_in/views/sign_in_view.dart';
-import '../modules/sign_up/bindings/sign_up_binding.dart';
-import '../modules/sign_up/views/sign_up_view.dart';
+import '../modules/rating/bindings/rating_binding.dart';
+import '../modules/rating/views/rating_view.dart';
 import '../modules/registration_play_game/bindings/registration_play_game_binding.dart';
 import '../modules/registration_play_game/views/registration_play_game_view.dart';
+import '../modules/restaurant_edited/bindings/restaurant_edited_binding.dart';
+import '../modules/restaurant_edited/views/restaurant_edited_view.dart';
+import '../modules/session_lobby/bindings/session_lobby_binding.dart';
+import '../modules/session_lobby/bindings/session_lobby_binding.dart';
+import '../modules/session_lobby/views/session_lobby_view.dart';
+import '../modules/session_lobby/views/session_lobby_view.dart';
 import '../modules/sign_in/bindings/sign_in_binding.dart';
+import '../modules/sign_in/bindings/sign_in_binding.dart';
+import '../modules/sign_in/views/sign_in_view.dart';
 import '../modules/sign_in/views/sign_in_view.dart';
 import '../modules/sign_in_enter_code/bindings/sign_in_enter_code_binding.dart';
 import '../modules/sign_in_enter_code/views/sign_in_enter_code_view.dart';
 import '../modules/sign_up/bindings/sign_up_binding.dart';
+import '../modules/sign_up/bindings/sign_up_binding.dart';
 import '../modules/sign_up/views/sign_up_view.dart';
-import '../modules/rating/bindings/rating_binding.dart';
-import '../modules/rating/views/rating_view.dart';
-import '../modules/restaurant_edited/bindings/restaurant_edited_binding.dart';
-import '../modules/restaurant_edited/views/restaurant_edited_view.dart';
-import '../modules/session_lobby/bindings/session_lobby_binding.dart';
-import '../modules/session_lobby/views/session_lobby_view.dart';
+import '../modules/sign_up/views/sign_up_view.dart';
 import '../modules/will_pay/bindings/will_pay_binding.dart';
 import '../modules/will_pay/views/will_pay_view.dart';
 
@@ -38,7 +40,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
+  static const INITIAL = Routes.SESSION_LOBBY;
 
   static final routes = [
     GetPage(
@@ -110,6 +112,13 @@ class AppPages {
       name: _Paths.SESSION_LOBBY,
       page: () => const SessionLobbyView(),
       binding: SessionLobbyBinding(),
+      children: [
+        GetPage(
+          name: _Paths.SESSION_LOBBY,
+          page: () => const SessionLobbyView(),
+          binding: SessionLobbyBinding(),
+        ),
+      ],
     ),
     GetPage(
       name: _Paths.RATING,

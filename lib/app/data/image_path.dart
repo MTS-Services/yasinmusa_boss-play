@@ -1,5 +1,24 @@
 class ImagePath {
   static const String baseUrl ='assets/images';
   static const String selectScreen = '$baseUrl/select_screen.png';
+  static const String blueContainerWelcome = '$baseUrl/blue_container_welcome.png';
+  static const String createNewSessionContainer = '$baseUrl/create_new_session_container .png';
+  static const String gameResult1st = '$baseUrl/game_result_1st.png';
+  static const String gameResult2st = '$baseUrl/game_result_2st.png';
+  static const String gameResult3st = '$baseUrl/game_result_3st.png';
+  static const String gameResultCrossX = '$baseUrl/game_result_Cross_X.png';
+  static const String headPhone = '$baseUrl/head_phone.png';
+  static const String locationOnerProfile = '$baseUrl/location_oner_profile.png';
+  static const String pinkContainerWelcome = '$baseUrl/pink_container_welcome.png';
+  static const String quickStatsExitLogo = '$baseUrl/quick_stats_exit_logo.png';
+  static const String scanQRCode = '$baseUrl/scan_QR_code .png';
+  static const String scanner = '$baseUrl/scanner.png';
+  static const String selectScreen2 = '$baseUrl/select_screen.png';
+  static const String sessionLobbyAmberContainer = '$baseUrl/session_lobby_amber_container .png';
+  static const String sessionLobbyBlueContainer = '$baseUrl/session_lobby_blue_container .png';
+  static const String sessionLobbyGreenContainer = '$baseUrl/session_lobby_green_container.png';
+  static const String sessionLobbyLitePinkContainer = '$baseUrl/session_lobby_lite_pink_container .png';
+  static const String sessionLobbyPinkContainer = '$baseUrl/session_lobby_pink_container .png';
+  static const String sessionLobbyYellowContainer = '$baseUrl/session_lobby_yellow_container .png';
 
 }
