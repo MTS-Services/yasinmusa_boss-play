@@ -11,6 +11,12 @@ abstract class Routes {
   static const FORGOT_ENTER_CODE = _Paths.FORGOT_ENTER_CODE;
   static const ENTER_NEW_PASSWORD = _Paths.ENTER_NEW_PASSWORD;
   static const REGISTRATION_PLAY_GAME = _Paths.REGISTRATION_PLAY_GAME;
+  static const GAME_PLAY = _Paths.GAME_PLAY;
+  static const GAME_RESULT = _Paths.GAME_RESULT;
+  static const WILL_PAY = _Paths.WILL_PAY;
+  static const SESSION_LOBBY = _Paths.SESSION_LOBBY;
+  static const RATING = _Paths.RATING;
+  static const RESTAURANT_EDITED = _Paths.RESTAURANT_EDITED;
 }
 
 abstract class _Paths {
@@ -23,4 +29,10 @@ abstract class _Paths {
   static const FORGOT_ENTER_CODE = '/forgot-enter-code';
   static const ENTER_NEW_PASSWORD = '/enter-new-password';
   static const REGISTRATION_PLAY_GAME = '/registration-play-game';
+  static const GAME_PLAY = '/game-play';
+  static const GAME_RESULT = '/game-result';
+  static const WILL_PAY = '/will-pay';
+  static const SESSION_LOBBY = '/session-lobby';
+  static const RATING = '/rating';
+  static const RESTAURANT_EDITED = '/restaurant-edited';
 }
