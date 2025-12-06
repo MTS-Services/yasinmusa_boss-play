@@ -22,6 +22,8 @@ abstract class Routes {
   static const PRIVACY_POLICY = _Paths.PRIVACY_POLICY;
   static const TERMS_CONDITIONS = _Paths.TERMS_CONDITIONS;
   static const HELP_SUPPORT = _Paths.HELP_SUPPORT;
+  static const RESTAURANT_EDITED = _Paths.RESTAURANT_EDITED;
+
 }
 
 abstract class _Paths {
@@ -45,4 +47,6 @@ abstract class _Paths {
   static const PRIVACY_POLICY = '/privacy-policy';
   static const TERMS_CONDITIONS = '/terms-conditions';
   static const HELP_SUPPORT = '/help-support';
+  static const RESTAURANT_EDITED = '/restaurant-edited';
+
 }
