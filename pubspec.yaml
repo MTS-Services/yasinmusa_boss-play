@@ -37,6 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   get: ^4.7.3
   flutter_screenutil: ^5.9.3
+  image_picker: ^1.2.0
+  shared_preferences: ^2.5.3
+
 
 dev_dependencies:
   flutter_test:

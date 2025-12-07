@@ -23,7 +23,9 @@ abstract class Routes {
   static const TERMS_CONDITIONS = _Paths.TERMS_CONDITIONS;
   static const HELP_SUPPORT = _Paths.HELP_SUPPORT;
   static const RESTAURANT_EDITED = _Paths.RESTAURANT_EDITED;
-
+  static const RESTAURANT_INFO = _Paths.RESTAURANT_INFO;
+  static const WAITING_PERSON_FOR_GAME = _Paths.WAITING_PERSON_FOR_GAME;
+  static const WELCOME_BACK = _Paths.WELCOME_BACK;
 }
 
 abstract class _Paths {
@@ -48,5 +50,7 @@ abstract class _Paths {
   static const TERMS_CONDITIONS = '/terms-conditions';
   static const HELP_SUPPORT = '/help-support';
   static const RESTAURANT_EDITED = '/restaurant-edited';
-
+  static const RESTAURANT_INFO = '/restaurant-info';
+  static const WAITING_PERSON_FOR_GAME = '/waiting-person-for-game';
+  static const WELCOME_BACK = '/welcome-back';
 }
