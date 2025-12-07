@@ -2,30 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
-
 class RegistrationPlayGameController extends GetxController {
   //TODO: Implement RegistrationPlayGameController
-  bool profileInProgress=false;
+  bool profileInProgress = false;
 
-  XFile ? _pickedImage;
+  XFile? _pickedImage;
 
   XFile? get pickedImage => _pickedImage;
+
   // ---- SAVE IMAGE TO SHARED PREF ----
   Future<void> _saveImageToPrefs(String path) async {
     //final prefs = await SharedPrefServices.getInstance();
     // await prefs.setString('profile_image_path', path);
-  //  await prefs.put('profile_image_path', path);
+    //  await prefs.put('profile_image_path', path);
   }
 
   // ---- LOAD IMAGE FROM SHARED PREF ----
-
 
   Future<void> setPickedImage(XFile image) async {
     _pickedImage = image;
     await _saveImageToPrefs(image.path);
     update();
   }
-
 
   Future<void> pickImage(ImageSource imageSource) async {
     final pickedFile = await ImagePicker().pickImage(source: imageSource);
@@ -35,7 +33,6 @@ class RegistrationPlayGameController extends GetxController {
       update();
     }
   }
-
 
   void chooseImageFrom() {
     showModalBottomSheet(
@@ -57,9 +54,7 @@ class RegistrationPlayGameController extends GetxController {
                 leading: Icon(Icons.photo),
                 title: Text('Gallery'),
                 onTap: () {
-                  pickImage(
-                      ImageSource.gallery
-                  );
+                  pickImage(ImageSource.gallery);
                   Navigator.pop(context);
                 },
               ),
@@ -69,6 +64,4 @@ class RegistrationPlayGameController extends GetxController {
       },
     );
   }
-
-
 }
