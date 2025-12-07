@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/add_player_by_qrcode/bindings/add_player_by_qrcode_binding.dart';
+import '../modules/add_player_by_qrcode/views/add_player_by_qrcode_view.dart';
 import '../modules/edit_profile/bindings/edit_profile_binding.dart';
 import '../modules/edit_profile/views/edit_profile_view.dart';
 import '../modules/enter_new_password/bindings/enter_new_password_binding.dart';
@@ -50,8 +52,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-
-  static const INITIAL = Routes.FORGOT_PASSWORD;
+  static const INITIAL = Routes.FORGOT_ENTER_CODE;
 
   static final routes = [
     GetPage(
@@ -173,6 +174,11 @@ class AppPages {
       name: _Paths.WELCOME_BACK,
       page: () => const WelcomeBackView(),
       binding: WelcomeBackBinding(),
+    ),
+    GetPage(
+      name: _Paths.ADD_PLAYER_BY_QRCODE,
+      page: () => const AddPlayerByQrcodeView(),
+      binding: AddPlayerByQrcodeBinding(),
     ),
   ];
 }
