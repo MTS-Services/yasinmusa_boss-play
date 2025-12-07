@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 
@@ -13,20 +12,7 @@ class SessionLobbyView extends GetView<SessionLobbyController> {
     return Scaffold(
       body: Column(
         children: [
-          GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-            ),
-            itemBuilder: (context, index) {
-              return Container(
-                height: 167.h,
-                width: 172.w,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              );
-            },
-          ),
+
         ],
       ),
     );
