@@ -51,7 +51,7 @@ class AppPages {
   AppPages._();
 
 
-  static const INITIAL = Routes.WELCOME_BACK;
+  static const INITIAL = Routes.REGISTRATION_PLAY_GAME;
 
   static final routes = [
     GetPage(
