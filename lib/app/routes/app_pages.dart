@@ -50,6 +50,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
+
   static const INITIAL = Routes.WELCOME_BACK;
 
   static final routes = [
