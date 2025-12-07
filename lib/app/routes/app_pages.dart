@@ -51,7 +51,7 @@ class AppPages {
   AppPages._();
 
 
-  static const INITIAL = Routes.REGISTRATION_PLAY_GAME;
+  static const INITIAL = Routes.FORGOT_PASSWORD;
 
   static final routes = [
     GetPage(
