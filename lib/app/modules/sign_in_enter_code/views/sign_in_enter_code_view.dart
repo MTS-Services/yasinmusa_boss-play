@@ -9,16 +9,8 @@ class SignInEnterCodeView extends GetView<SignInEnterCodeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('SignInEnterCodeView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'SignInEnterCodeView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+
+      // body: ,
     );
   }
 }
