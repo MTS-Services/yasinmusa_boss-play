@@ -23,7 +23,7 @@ abstract class Routes {
   static const TERMS_CONDITIONS = _Paths.TERMS_CONDITIONS;
   static const HELP_SUPPORT = _Paths.HELP_SUPPORT;
   static const RESTAURANT_EDITED = _Paths.RESTAURANT_EDITED;
-
+  static const SESSION_LOBBY_TWO = _Paths.SESSION_LOBBY_TWO;
 }
 
 abstract class _Paths {
@@ -48,5 +48,5 @@ abstract class _Paths {
   static const TERMS_CONDITIONS = '/terms-conditions';
   static const HELP_SUPPORT = '/help-support';
   static const RESTAURANT_EDITED = '/restaurant-edited';
-
+  static const SESSION_LOBBY_TWO = '/session-lobby-two';
 }

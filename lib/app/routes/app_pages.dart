@@ -28,6 +28,8 @@ import '../modules/registration_play_game/bindings/registration_play_game_bindin
 import '../modules/registration_play_game/views/registration_play_game_view.dart';
 import '../modules/session_lobby/bindings/session_lobby_binding.dart';
 import '../modules/session_lobby/views/session_lobby_view.dart';
+import '../modules/session_lobby_two/bindings/session_lobby_two_binding.dart';
+import '../modules/session_lobby_two/views/session_lobby_two_view.dart';
 import '../modules/sign_in/bindings/sign_in_binding.dart';
 import '../modules/sign_in/views/sign_in_view.dart';
 import '../modules/sign_in_enter_code/bindings/sign_in_enter_code_binding.dart';
@@ -44,7 +46,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.NOTIFICATIONS;
+  static const INITIAL = Routes.SESSION_LOBBY;
 
   static final routes = [
     GetPage(
@@ -151,6 +153,11 @@ class AppPages {
       name: _Paths.HELP_SUPPORT,
       page: () => const HelpSupportView(),
       binding: HelpSupportBinding(),
+    ),
+    GetPage(
+      name: _Paths.SESSION_LOBBY_TWO,
+      page: () => const SessionLobbyTwoView(),
+      binding: SessionLobbyTwoBinding(),
     ),
   ];
 }
