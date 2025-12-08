@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
@@ -30,52 +31,70 @@ class ForgotEnterCodeView extends GetView<ForgotEnterCodeController> {
                   child: SizedBox(
                     width: double.infinity,
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 30),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 30,
+                      ),
                       child: Column(
-                        spacing: 10,
-                          children: [
-                        Text('Enter code ',style: AppTextStyles.bold32,),
-                        Text("Didn't receive OTP? ",style: AppTextStyles.regular16,),
-                        Text("Resent Code ",style: AppTextStyles.regular16.copyWith(color: AppColors.secondaryColor),),
-                            PinCodeTextField(
-                              length: 4,
-                              obscureText: false,
-                              animationType: AnimationType.fade,
-                              keyboardType: TextInputType.number,
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              textStyle: TextStyle(
-                                color: AppColors.whiteColor
-                              ),
-                              pinTheme: PinTheme(
-                                shape: PinCodeFieldShape.box,
-                                borderRadius: BorderRadius.circular(5),
-                                fieldHeight: 50,
-                                fieldWidth: 50,
-                                activeFillColor:  AppColors.primaryColor,
-                                inactiveFillColor: AppColors.primaryColor,
-                                selectedFillColor: AppColors.primaryColor,
-                                activeColor: AppColors.primaryColor,
-                                inactiveColor: AppColors.primaryColor,
-                                selectedColor: AppColors.primaryColor,
-                              ),
-                              animationDuration: Duration(milliseconds: 300),
-                              enableActiveFill: true,
-                              backgroundColor: Colors.transparent,
-                              onCompleted: (v) {},
-                              onChanged: (value) {},
-                              beforeTextPaste: (text) {
-                                return true;
-                              },
-                              appContext: context,
+                        children: [
+                          Text('Enter code ', style: AppTextStyles.bold32),
+                          Text(
+                            "Didn't receive OTP? ",
+                            style: AppTextStyles.regular16,
+                          ),
+                          SizedBox(height: 10.h),
+                          Text(
+                            "Resent Code ",
+                            style: AppTextStyles.regular16.copyWith(
+                              color: AppColors.secondaryColor,
+                            ),textAlign: TextAlign.center,
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 110.w,vertical: 4),
+                            child: Divider(
+                              color: AppColors.secondaryColor,
+                              thickness: 1.5,
                             ),
-                            SizedBox(
-                              width: double.infinity,
-                              child: ElevatedButton(
-                                onPressed: () {},
-                                child: Text('Next'),
-                              ),
+                          ),
+                          SizedBox(height: 12.h),
+                          PinCodeTextField(
+                            length: 4,
+                            obscureText: false,
+                            animationType: AnimationType.fade,
+                            keyboardType: TextInputType.number,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            textStyle: TextStyle(color: AppColors.whiteColor),
+                            pinTheme: PinTheme(
+                              shape: PinCodeFieldShape.box,
+                              borderRadius: BorderRadius.circular(5),
+                              fieldHeight: 50,
+                              fieldWidth: 50,
+                              activeFillColor: AppColors.primaryColor,
+                              inactiveFillColor: AppColors.primaryColor,
+                              selectedFillColor: AppColors.primaryColor,
+                              activeColor: AppColors.primaryColor,
+                              inactiveColor: AppColors.primaryColor,
+                              selectedColor: AppColors.primaryColor,
                             ),
-                      ]),
+                            animationDuration: Duration(milliseconds: 300),
+                            enableActiveFill: true,
+                            backgroundColor: Colors.transparent,
+                            onCompleted: (v) {},
+                            onChanged: (value) {},
+                            beforeTextPaste: (text) {
+                              return true;
+                            },
+                            appContext: context,
+                          ),
+                          SizedBox(
+                            width: double.infinity,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              child: Text('Next'),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
