@@ -36,6 +36,7 @@ class HelpSupportView extends GetView<HelpSupportController> {
               CustomTextField(
                 hintText: "alma.lawson@example.com",
                 hintTopText: '',
+                suffixIcon: Icon(Icons.mail_outline_rounded),
               ),
             ],
           ),
