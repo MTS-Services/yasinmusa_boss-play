@@ -27,6 +27,7 @@ abstract class Routes {
   static const WAITING_PERSON_FOR_GAME = _Paths.WAITING_PERSON_FOR_GAME;
   static const WELCOME_BACK = _Paths.WELCOME_BACK;
   static const ADD_PLAYER_BY_QRCODE = _Paths.ADD_PLAYER_BY_QRCODE;
+  static const SESSION_LOBBY_TWO = _Paths.SESSION_LOBBY_TWO;
 }
 
 abstract class _Paths {
@@ -55,4 +56,5 @@ abstract class _Paths {
   static const WAITING_PERSON_FOR_GAME = '/waiting-person-for-game';
   static const WELCOME_BACK = '/welcome-back';
   static const ADD_PLAYER_BY_QRCODE = '/add-player-by-qrcode';
+  static const SESSION_LOBBY_TWO = '/session-lobby-two';
 }
