@@ -24,6 +24,8 @@ abstract class Routes {
   static const HELP_SUPPORT = _Paths.HELP_SUPPORT;
   static const RESTAURANT_EDITED = _Paths.RESTAURANT_EDITED;
   static const SESSION_LOBBY_TWO = _Paths.SESSION_LOBBY_TWO;
+  static const SPLASH = _Paths.SPLASH;
+  static const SELECT_WHO_YOU_ARE = _Paths.SELECT_WHO_YOU_ARE;
 }
 
 abstract class _Paths {
@@ -49,4 +51,6 @@ abstract class _Paths {
   static const HELP_SUPPORT = '/help-support';
   static const RESTAURANT_EDITED = '/restaurant-edited';
   static const SESSION_LOBBY_TWO = '/session-lobby-two';
+  static const SPLASH = '/splash';
+  static const SELECT_WHO_YOU_ARE = '/select-who-you-are';
 }

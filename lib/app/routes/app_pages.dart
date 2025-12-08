@@ -26,6 +26,8 @@ import '../modules/rating/bindings/rating_binding.dart';
 import '../modules/rating/views/rating_view.dart';
 import '../modules/registration_play_game/bindings/registration_play_game_binding.dart';
 import '../modules/registration_play_game/views/registration_play_game_view.dart';
+import '../modules/select_who_you_are/bindings/select_who_you_are_binding.dart';
+import '../modules/select_who_you_are/views/select_who_you_are_view.dart';
 import '../modules/session_lobby/bindings/session_lobby_binding.dart';
 import '../modules/session_lobby/views/session_lobby_view.dart';
 import '../modules/session_lobby_two/bindings/session_lobby_two_binding.dart';
@@ -36,6 +38,8 @@ import '../modules/sign_in_enter_code/bindings/sign_in_enter_code_binding.dart';
 import '../modules/sign_in_enter_code/views/sign_in_enter_code_view.dart';
 import '../modules/sign_up/bindings/sign_up_binding.dart';
 import '../modules/sign_up/views/sign_up_view.dart';
+import '../modules/splash/bindings/splash_binding.dart';
+import '../modules/splash/views/splash_view.dart';
 import '../modules/terms_conditions/bindings/terms_conditions_binding.dart';
 import '../modules/terms_conditions/views/terms_conditions_view.dart';
 import '../modules/will_pay/bindings/will_pay_binding.dart';
@@ -46,7 +50,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.SESSION_LOBBY;
+  static const INITIAL = Routes.SPLASH;
 
   static final routes = [
     GetPage(
@@ -158,6 +162,16 @@ class AppPages {
       name: _Paths.SESSION_LOBBY_TWO,
       page: () => const SessionLobbyTwoView(),
       binding: SessionLobbyTwoBinding(),
+    ),
+    GetPage(
+      name: _Paths.SPLASH,
+      page: () => const SplashView(),
+      binding: SplashBinding(),
+    ),
+    GetPage(
+      name: _Paths.SELECT_WHO_YOU_ARE,
+      page: () => const SelectWhoYouAreView(),
+      binding: SelectWhoYouAreBinding(),
     ),
   ];
 }
