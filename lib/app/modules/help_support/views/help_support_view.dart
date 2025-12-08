@@ -11,12 +11,11 @@ import '../controllers/help_support_controller.dart';
 
 class HelpSupportView extends GetView<HelpSupportController> {
   const HelpSupportView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
-        title: "Help & Support",
-      ),
+      appBar: CustomAppBar(title: "Help & Support"),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.w),
         child: Padding(
@@ -24,13 +23,20 @@ class HelpSupportView extends GetView<HelpSupportController> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Align(alignment: Alignment.center,child: Image.asset(ImagePath.headPhone,height: 215.h,)),
-              SizedBox(
-                height: 10.h,
+              Align(
+                alignment: Alignment.center,
+                child: Image.asset(ImagePath.headPhone, height: 215.h),
               ),
-              Text("Hello, How can we\nhelp you?",style: AppTextStyles.medium24,textAlign: TextAlign.center,),
-              CustomTextField(hintText: "alma.lawson@example.com", hintTopText: '')
-
+              SizedBox(height: 10.h),
+              Text(
+                "Hello, How can we\nhelp you?",
+                style: AppTextStyles.medium24,
+                textAlign: TextAlign.center,
+              ),
+              CustomTextField(
+                hintText: "alma.lawson@example.com",
+                hintTopText: '',
+              ),
             ],
           ),
         ),
