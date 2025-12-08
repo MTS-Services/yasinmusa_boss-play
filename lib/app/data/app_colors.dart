@@ -15,5 +15,9 @@ class AppColors{
   static const Color greenJuiceColor = Color(0xff3DDE2E);
   static const Color snowPinkColor = Color(0xffFFB6CB);
   static const Color hintTextGreyColor = Color(0xff7D7D7D);
+  static const Color lightBlack   = Color(0xff131313);
+  static const Color c3Black   = Color(0xffc3c3c3);
+  static const Color d7Black   = Color(0xff7D7D7D);
+  static const Color l89Black   = Color(0xff898989);
 
 }

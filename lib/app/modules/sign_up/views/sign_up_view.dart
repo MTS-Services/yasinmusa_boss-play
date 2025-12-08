@@ -16,82 +16,83 @@ class SignUpView extends GetView<SignUpController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('SignUpView'), centerTitle: true),
-      body: Scaffold(
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.sp),
           child: Center(
-            child: SafeArea(
-              child: SingleChildScrollView(
-                child: Container(
-                  padding: EdgeInsets.symmetric(
-                    vertical: 40.h,
-                    horizontal: 16.h,
-                  ),
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: AppColors.secondaryBlackColor,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text('Sign Up', style: AppTextStyles.SpaceGroteskBold32),
-                      Text(
-                        'Access your account to continue.',
-                        style: AppTextStyles.regular16.copyWith(
-                          color: AppColors.textColor,
+            child: SingleChildScrollView(
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                  vertical: 40.h,
+                  horizontal: 16.h,
+                ),
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: AppColors.secondaryBlackColor,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text('Sign Up', style: AppTextStyles.SpaceGroteskBold32),
+                    Text(
+                      'Access your account to continue.',
+                      style: AppTextStyles.regular16.copyWith(
+                        color: AppColors.textColor,
+                      ),
+                    ),
+                    SizedBox(height: 30.w),
+                    CustomTextField(
+                      hintText: 'youremail@here',
+                      hintTopText: 'Email',
+                    ),
+                    CustomTextField(
+                      hintText: '**********',
+                      hintTopText: 'Password',
+                      suffixIcon: Icon(Icons.visibility_off_outlined),
+                    ),
+                    CustomTextField(
+                      hintText: '**********',
+                      hintTopText: 'Confirm Password',
+                      suffixIcon: Icon(Icons.visibility_off_outlined),
+                    ),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        'Forgot password?',
+                        style: AppTextStyles.bold16.copyWith(
+                          color: AppColors.starFleetBlueColor,
                         ),
                       ),
-                      SizedBox(height: 30.w),
-                      CustomTextField(
-                        hintText: 'youremail@here',
-                        hintTopText: 'Email',
+                    ),
+                    SizedBox(height: 32.w),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text('Sign Up'),
                       ),
-                      CustomTextField(
-                        hintText: '**********',
-                        hintTopText: 'Password',
-                        suffixIcon: Icon(Icons.visibility_off_outlined),
-                      ),
-                      CustomTextField(
-                        hintText: '**********',
-                        hintTopText: 'Confirm Password',
-                        suffixIcon: Icon(Icons.visibility_off_outlined),
-                      ),
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: Text(
-                          'Forgot password?',
-                          style: AppTextStyles.bold16.copyWith(
-                            color: AppColors.starFleetBlueColor,
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 32.w),
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          onPressed: () {},
-                          child: Text('Sign Up'),
-                        ),
-                      ),
-                      SizedBox(height: 32.h),
-                      SizedBox(
-                        width: double.infinity,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              "Already Have an account ?",
-                              style: AppTextStyles.regular16.copyWith(
-                                color: AppColors.topHintColor,
-                              ),
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
+                    ),
+                    SizedBox(height: 32.h),
+                    SizedBox(
+                      width: double.infinity,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Already Have an account ?",
+                            style: AppTextStyles.regular16.copyWith(
+                              color: AppColors.topHintColor,
                             ),
-                            InkWell(
-                              onTap: () {
-                                Get.toNamed(Routes.SIGN_UP);
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Get.toNamed(Routes.SIGN_UP);
+                            },
+                            child: InkWell(
+                              onTap: (){
+                                Get.toNamed(Routes.FORGOT_PASSWORD);
                               },
                               child: Text(
                                 'Sign In',
@@ -102,17 +103,16 @@ class SignUpView extends GetView<SignUpController> {
                                 overflow: TextOverflow.ellipsis,
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ),
           ),
         ),
-      ),
     );
   }
 }

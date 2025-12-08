@@ -23,6 +23,10 @@ abstract class Routes {
   static const TERMS_CONDITIONS = _Paths.TERMS_CONDITIONS;
   static const HELP_SUPPORT = _Paths.HELP_SUPPORT;
   static const RESTAURANT_EDITED = _Paths.RESTAURANT_EDITED;
+  static const RESTAURANT_INFO = _Paths.RESTAURANT_INFO;
+  static const WAITING_PERSON_FOR_GAME = _Paths.WAITING_PERSON_FOR_GAME;
+  static const WELCOME_BACK = _Paths.WELCOME_BACK;
+  static const ADD_PLAYER_BY_QRCODE = _Paths.ADD_PLAYER_BY_QRCODE;
   static const SESSION_LOBBY_TWO = _Paths.SESSION_LOBBY_TWO;
   static const SPLASH = _Paths.SPLASH;
   static const SELECT_WHO_YOU_ARE = _Paths.SELECT_WHO_YOU_ARE;
@@ -50,6 +54,10 @@ abstract class _Paths {
   static const TERMS_CONDITIONS = '/terms-conditions';
   static const HELP_SUPPORT = '/help-support';
   static const RESTAURANT_EDITED = '/restaurant-edited';
+  static const RESTAURANT_INFO = '/restaurant-info';
+  static const WAITING_PERSON_FOR_GAME = '/waiting-person-for-game';
+  static const WELCOME_BACK = '/welcome-back';
+  static const ADD_PLAYER_BY_QRCODE = '/add-player-by-qrcode';
   static const SESSION_LOBBY_TWO = '/session-lobby-two';
   static const SPLASH = '/splash';
   static const SELECT_WHO_YOU_ARE = '/select-who-you-are';
