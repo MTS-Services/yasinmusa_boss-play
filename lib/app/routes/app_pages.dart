@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/add_player_by_qrcode/bindings/add_player_by_qrcode_binding.dart';
+import '../modules/add_player_by_qrcode/views/add_player_by_qrcode_view.dart';
 import '../modules/edit_profile/bindings/edit_profile_binding.dart';
 import '../modules/edit_profile/views/edit_profile_view.dart';
 import '../modules/enter_new_password/bindings/enter_new_password_binding.dart';
@@ -26,8 +28,12 @@ import '../modules/rating/bindings/rating_binding.dart';
 import '../modules/rating/views/rating_view.dart';
 import '../modules/registration_play_game/bindings/registration_play_game_binding.dart';
 import '../modules/registration_play_game/views/registration_play_game_view.dart';
+import '../modules/restaurant_info/bindings/restaurant_info_binding.dart';
+import '../modules/restaurant_info/views/restaurant_info_view.dart';
 import '../modules/session_lobby/bindings/session_lobby_binding.dart';
 import '../modules/session_lobby/views/session_lobby_view.dart';
+import '../modules/session_lobby_two/bindings/session_lobby_two_binding.dart';
+import '../modules/session_lobby_two/views/session_lobby_two_view.dart';
 import '../modules/sign_in/bindings/sign_in_binding.dart';
 import '../modules/sign_in/views/sign_in_view.dart';
 import '../modules/sign_in_enter_code/bindings/sign_in_enter_code_binding.dart';
@@ -36,6 +42,10 @@ import '../modules/sign_up/bindings/sign_up_binding.dart';
 import '../modules/sign_up/views/sign_up_view.dart';
 import '../modules/terms_conditions/bindings/terms_conditions_binding.dart';
 import '../modules/terms_conditions/views/terms_conditions_view.dart';
+import '../modules/waiting_person_for_game/bindings/waiting_person_for_game_binding.dart';
+import '../modules/waiting_person_for_game/views/waiting_person_for_game_view.dart';
+import '../modules/welcome_back/bindings/welcome_back_binding.dart';
+import '../modules/welcome_back/views/welcome_back_view.dart';
 import '../modules/will_pay/bindings/will_pay_binding.dart';
 import '../modules/will_pay/views/will_pay_view.dart';
 
@@ -44,7 +54,8 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.SIGN_IN;
+  static const INITIAL = Routes.SESSION_LOBBY;
+
 
   static final routes = [
     GetPage(
@@ -114,7 +125,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SESSION_LOBBY,
-      page: () => const SessionLobbyView(),
+      page: () => SessionLobbyView(),
       binding: SessionLobbyBinding(),
     ),
     GetPage(
@@ -151,6 +162,31 @@ class AppPages {
       name: _Paths.HELP_SUPPORT,
       page: () => const HelpSupportView(),
       binding: HelpSupportBinding(),
+    ),
+    GetPage(
+      name: _Paths.SESSION_LOBBY_TWO,
+      page: () => const SessionLobbyTwoView(),
+      binding: SessionLobbyTwoBinding(),
+    ),
+    GetPage(
+      name: _Paths.RESTAURANT_INFO,
+      page: () => const RestaurantInfoView(),
+      binding: RestaurantInfoBinding(),
+    ),
+    GetPage(
+      name: _Paths.WAITING_PERSON_FOR_GAME,
+      page: () => const WaitingPersonForGameView(),
+      binding: WaitingPersonForGameBinding(),
+    ),
+    GetPage(
+      name: _Paths.WELCOME_BACK,
+      page: () => const WelcomeBackView(),
+      binding: WelcomeBackBinding(),
+    ),
+    GetPage(
+      name: _Paths.ADD_PLAYER_BY_QRCODE,
+      page: () => const AddPlayerByQrcodeView(),
+      binding: AddPlayerByQrcodeBinding(),
     ),
   ];
 }

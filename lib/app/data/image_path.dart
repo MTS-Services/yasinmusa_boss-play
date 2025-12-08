@@ -23,5 +23,20 @@ class ImagePath {
   static const String sessionLobbyPinkContainer = '$baseUrl/session_lobby_pink_container .png';
   static const String sessionLobbyYellowContainer = '$baseUrl/session_lobby_yellow_container .png';
   static const String alex = '$baseUrl/alex.png';
+  static const String playAgain = '$baseUrl/play_again.png';
+  static const String homeIcon = '$baseUrl/home_icon.png';
+  static const String person = '$baseUrl/person.png';
+  static const String notification = '$baseUrl/notification.png';
+  static const String award = '$baseUrl/award.png';
+  static const String gift = '$baseUrl/gift.png';
+  static const String arrowUpIcon = '$baseUrl/arrowUpIcon.png';
+  static const String personImage = '$baseUrl/Ellipse 33.png';
+  static const String fanIcon = '$baseUrl/fanIcon.png';
+  static const String diceRollIcon = '$baseUrl/diceRollIcon.png';
+  static const String sessorIcon = '$baseUrl/sessorIcon.png';
+  static const String dollerIcon = '$baseUrl/dollerIcon.png';
+  static const String card = '$baseUrl/card.png';
+  static const String frameIcon = '$baseUrl/Frame 5 (2).png';
+  static const String logOut = '$baseUrl/logout-04.png';
 
 }

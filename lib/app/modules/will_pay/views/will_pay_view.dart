@@ -24,7 +24,7 @@ class WillPayView extends GetView<WillPayController> {
             Padding(
               padding: EdgeInsets.symmetric(vertical: 35.h),
               child: CircleAvatar(
-                maxRadius: Get.height * .12,
+                maxRadius: Get.height * .15,
                 child: Image.asset(ImagePath.alex),
               ),
             ),
@@ -36,8 +36,50 @@ class WillPayView extends GetView<WillPayController> {
                 color: AppColors.secondaryWhiteColor,
               ),
             ),
+            SizedBox(height: 40.h),
+            Divider(color: AppColors.dividerColor, height: 1.h),
+            SizedBox(height: 24.h),
 
-            Divider()
+            ElevatedButton.icon(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: AppColors.snowPinkColor,
+              ),
+              label: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(ImagePath.playAgain, height: 16.h),
+                  SizedBox(width: 8.w),
+                  Text(
+                    "Play Again",
+                    style: AppTextStyles.regular12.copyWith(
+                      color: AppColors.blackColor,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 17.h),
+
+            ElevatedButton.icon(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: AppColors.secondaryColor,
+              ),
+              label: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(ImagePath.homeIcon, height: 16.h),
+                  SizedBox(width: 8.w),
+                  Text(
+                    "End Session",
+                    style: AppTextStyles.regular12.copyWith(
+                      color: AppColors.whiteColor,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
