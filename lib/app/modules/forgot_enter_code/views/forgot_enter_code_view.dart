@@ -38,14 +38,14 @@ class ForgotEnterCodeView extends GetView<ForgotEnterCodeController> {
                       ),
                       child: Column(
                         children: [
-                          Text('Enter code ', style: AppTextStyles.bold32),
+                          Text('Enter code', style: AppTextStyles.bold32),
                           Text(
-                            "Didn't receive OTP? ",
+                            "Didn't receive OTP?",
                             style: AppTextStyles.regular16,
                           ),
                           SizedBox(height: 10.h),
                           Text(
-                            "Resent Code ",
+                            "Resent Code",
                             style: AppTextStyles.regular16.copyWith(
                               color: AppColors.secondaryColor,
                             ),textAlign: TextAlign.center,

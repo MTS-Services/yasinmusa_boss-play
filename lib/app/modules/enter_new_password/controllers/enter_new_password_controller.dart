@@ -1,23 +1,14 @@
 import 'package:get/get.dart';
 
 class EnterNewPasswordController extends GetxController {
-  //TODO: Implement EnterNewPasswordController
+  RxBool isVisibleAdd = true.obs;
+  RxBool isVisibleConfirm = true.obs;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  void isVisibleAddOnTap() {
+    isVisibleAdd.value = !isVisibleAdd.value;
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  void isVisibleConfirmOnTap() {
+    isVisibleConfirm.value = !isVisibleConfirm.value;
   }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

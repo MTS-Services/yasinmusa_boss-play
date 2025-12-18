@@ -1,23 +1,16 @@
 import 'package:get/get.dart';
 
 class SignUpController extends GetxController {
-  //TODO: Implement SignUpController
+  RxBool isVisible = true.obs;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  void isVisibleOnTap (){
+    isVisible.value = !isVisible.value;
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  RxBool isVisibleConfirm = true.obs;
+
+  void isVisibleOnTapConfirm (){
+    isVisibleConfirm.value = !isVisibleConfirm.value;
   }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

@@ -5,22 +5,27 @@ import 'package:yasinmusa/app/data/app_text_styles.dart';
 
 class CustomTextField extends StatelessWidget {
   final String hintText;
-  final Icon? suffixIcon;
+  final Widget? suffixIcon;
   final String hintTopText;
   final Icon? prefixIcon;
   final Color? suffixIconColor;
   final Color? prefixIconColor;
+  final bool? obscureText ;
 
   const CustomTextField({
     super.key,
     required this.hintText,
     required this.hintTopText,
-    this.suffixIcon, this.prefixIcon, this.suffixIconColor, this.prefixIconColor,
+    this.suffixIcon,
+    this.prefixIcon,
+    this.suffixIconColor,
+    this.prefixIconColor,
+    this.obscureText,
   });
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
@@ -34,6 +39,10 @@ class CustomTextField extends StatelessWidget {
         ),
 
         TextFormField(
+          style: TextStyle(color: AppColors.whiteColor),
+          cursorColor: AppColors.whiteColor,
+          cursorHeight: 24,
+          obscureText: obscureText ?? false,
           decoration: InputDecoration(
             filled: true,
             fillColor: AppColors.primaryColor,
@@ -42,10 +51,10 @@ class CustomTextField extends StatelessWidget {
             suffixIcon: suffixIcon,
             suffixIconColor: suffixIconColor ?? AppColors.whiteColor,
             prefixIcon: prefixIcon,
-            prefixIconColor:prefixIconColor ?? AppColors.whiteColor,
+            prefixIconColor: prefixIconColor ?? AppColors.whiteColor,
           ),
         ),
-        SizedBox(height: 24.h,),
+        SizedBox(height: 24.h),
       ],
     );
   }

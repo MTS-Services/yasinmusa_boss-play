@@ -42,5 +42,6 @@ class ImagePath {
   static const String home = '$baseUrl/homeIcon.png';
   static const String personIcon = '$baseUrl/personIcon.png';
   static const String activityIcon = '$baseUrl/activityIcon.png';
+  static const String appleLogo = '$baseUrl/apple_logo.png';
 
 }
