@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:yasinmusa/app/data/app_text_styles.dart';
 import 'package:yasinmusa/app/modules/common_widgets/custom_app_bar.dart';
+import 'package:yasinmusa/app/routes/app_pages.dart';
 
 import '../../../data/app_colors.dart';
 import '../controllers/profile_controller.dart';
@@ -36,11 +37,21 @@ class ProfileView extends GetView<ProfileController> {
                       color: Colors.white,
                     ),
                   ),
-                  buildDecoratedBox(title: 'Account', icon: Icons.perm_identity_rounded,onTap: (){}),
-                  buildDecoratedBox(title: 'Privacy & Policy', icon: Icons.privacy_tip_outlined,onTap: (){}),
-                  buildDecoratedBox(title: 'Terms & Condition', icon: Icons.menu,onTap: (){}),
-                  buildDecoratedBox(title: 'Help & Support', icon: Icons.headset_mic_outlined,onTap: (){}),
-                  buildDecoratedBox(title: 'Log Out', icon: Icons.logout,onTap: (){}),
+                  buildDecoratedBox(title: 'Account', icon: Icons.perm_identity_rounded,onTap: (){
+                    Get.toNamed(Routes.EDIT_PROFILE);
+                  }),
+                  buildDecoratedBox(title: 'Privacy & Policy', icon: Icons.privacy_tip_outlined,onTap: (){
+                    Get.toNamed(Routes.PRIVACY_POLICY);
+                  }),
+                  buildDecoratedBox(title: 'Terms & Condition', icon: Icons.menu,onTap: (){
+                    Get.toNamed(Routes.TERMS_CONDITIONS);
+                  }),
+                  buildDecoratedBox(title: 'Help & Support', icon: Icons.headset_mic_outlined,onTap: (){
+                    Get.toNamed(Routes.HELP_SUPPORT);
+                  }),
+                  buildDecoratedBox(title: 'Log Out', icon: Icons.logout,onTap: (){
+                    Get.toNamed(Routes.SIGN_IN);
+                  }),
                 ],
               ),
             ),

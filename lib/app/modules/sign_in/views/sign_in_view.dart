@@ -50,10 +50,15 @@ class SignInView extends GetView<SignInController> {
                     ),
                     Align(
                       alignment: Alignment.centerRight,
-                      child: Text(
-                        'Forgot password?',
-                        style: AppTextStyles.bold16.copyWith(
-                          color: AppColors.starFleetBlueColor,
+                      child: GestureDetector(
+                        onTap: (){
+                          Get.toNamed(Routes.FORGOT_PASSWORD);
+                        },
+                        child: Text(
+                          'Forgot password?',
+                          style: AppTextStyles.bold16.copyWith(
+                            color: AppColors.starFleetBlueColor,
+                          ),
                         ),
                       ),
                     ),
@@ -61,7 +66,9 @@ class SignInView extends GetView<SignInController> {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.offAllNamed(Routes.WELCOME_BACK);
+                        },
                         child: Text('Sign In'),
                       ),
                     ),

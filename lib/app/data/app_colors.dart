@@ -19,5 +19,8 @@ class AppColors{
   static const Color c3Black   = Color(0xffc3c3c3);
   static const Color d7Black   = Color(0xff7D7D7D);
   static const Color l89Black   = Color(0xff898989);
+  static const Color grey8B   = Color(0xff8B8A88);
+  static const Color backgroundBlur   = Color(0xff666666);
+
 
 }

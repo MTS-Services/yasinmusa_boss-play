@@ -5,6 +5,7 @@ import 'package:yasinmusa/app/data/app_colors.dart';
 import 'package:yasinmusa/app/data/app_text_styles.dart';
 import 'package:yasinmusa/app/data/image_path.dart';
 import 'package:yasinmusa/app/modules/common_widgets/custom_app_bar.dart';
+import 'package:yasinmusa/app/routes/app_pages.dart';
 import '../controllers/session_lobby_controller.dart';
 
 class SessionLobbyView extends GetView<SessionLobbyController> {
@@ -72,6 +73,9 @@ class SessionLobbyView extends GetView<SessionLobbyController> {
                     title: item["title"] ?? '',
                     subTitle: item["subTitle"] ?? '',
                     icon: item["icon"] ?? '',
+                    onTap: () {
+                      Get.toNamed(Routes.GAME_PLAY);
+                    },
                   );
                 },
                 childCount: lobbyItems.length, // number of grid items
@@ -88,36 +92,40 @@ class SessionLobbyView extends GetView<SessionLobbyController> {
     required String title,
     required String subTitle,
     required String icon,
+    VoidCallback? onTap,
   }) {
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        image: DecorationImage(
-          image: AssetImage(backgroundImage),
-          fit: BoxFit.cover,
-          scale: 4,
+    return GestureDetector(
+      onTap: onTap,
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          image: DecorationImage(
+            image: AssetImage(backgroundImage),
+            fit: BoxFit.cover,
+            scale: 4,
+          ),
         ),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Image.asset(icon, scale: 3),
-            Spacer(),
-            Text(
-              title,
-              style: AppTextStyles.medium16.copyWith(
-                color: AppColors.whiteColor,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image.asset(icon, scale: 3),
+              Spacer(),
+              Text(
+                title,
+                style: AppTextStyles.medium16.copyWith(
+                  color: AppColors.whiteColor,
+                ),
               ),
-            ),
-            Text(
-              subTitle,
-              style: AppTextStyles.medium12.copyWith(
-                color: AppColors.whiteColor,
+              Text(
+                subTitle,
+                style: AppTextStyles.medium12.copyWith(
+                  color: AppColors.whiteColor,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

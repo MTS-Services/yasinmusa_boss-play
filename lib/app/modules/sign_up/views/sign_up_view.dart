@@ -68,7 +68,9 @@ class SignUpView extends GetView<SignUpController> {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.toNamed(Routes.SIGN_IN_ENTER_CODE);
+                        },
                         child: Text('Sign Up'),
                       ),
                     ),
@@ -92,7 +94,7 @@ class SignUpView extends GetView<SignUpController> {
                             },
                             child: InkWell(
                               onTap: (){
-                                Get.toNamed(Routes.FORGOT_PASSWORD);
+                                Get.toNamed(Routes.SIGN_IN);
                               },
                               child: Text(
                                 'Sign In',

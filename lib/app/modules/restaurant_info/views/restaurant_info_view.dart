@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:yasinmusa/app/data/app_colors.dart';
 import 'package:yasinmusa/app/data/app_text_styles.dart';
 import 'package:yasinmusa/app/data/image_path.dart';
+import 'package:yasinmusa/app/routes/app_pages.dart';
 
 import '../controllers/restaurant_info_controller.dart';
 
@@ -76,7 +77,9 @@ class RestaurantInfoView extends GetView<RestaurantInfoController> {
                         SizedBox(height: 30.h,),
                         SizedBox(
                           width: double.infinity,
-                            child: ElevatedButton(onPressed: (){}, child: Text('Confirm')))
+                            child: ElevatedButton(onPressed: (){
+                              Get.toNamed(Routes.WELCOME_BACK);
+                            }, child: Text('Confirm')))
                       ],
                     ),
                   ),

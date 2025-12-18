@@ -1,7 +1,11 @@
 import 'package:get/get.dart';
 
+import '../modules/activitys/bindings/activitys_binding.dart';
+import '../modules/activitys/views/activitys_view.dart';
 import '../modules/add_player_by_qrcode/bindings/add_player_by_qrcode_binding.dart';
 import '../modules/add_player_by_qrcode/views/add_player_by_qrcode_view.dart';
+import '../modules/custom_bottom_bar/bindings/custom_bottom_bar_binding.dart';
+import '../modules/custom_bottom_bar/views/custom_bottom_bar_view.dart';
 import '../modules/edit_profile/bindings/edit_profile_binding.dart';
 import '../modules/edit_profile/views/edit_profile_view.dart';
 import '../modules/enter_new_password/bindings/enter_new_password_binding.dart';
@@ -58,18 +62,23 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.TERMS_CONDITIONS;
+  static const INITIAL = Routes.CUSTOM_BOTTOM_BAR;
 
   static final routes = [
+    GetPage(
+      name: _Paths.SPLASH,
+      page: () => const SplashView(),
+      binding: SplashBinding(),
+    ),
+    GetPage(
+      name: _Paths.SELECT_WHO_YOU_ARE,
+      page: () => const SelectWhoYouAreView(),
+      binding: SelectWhoYouAreBinding(),
+    ),
     GetPage(
       name: _Paths.HOME,
       page: () => const HomeView(),
       binding: HomeBinding(),
-    ),
-    GetPage(
-      name: _Paths.SIGN_IN,
-      page: () => const SignInView(),
-      binding: SignInBinding(),
     ),
     GetPage(
       name: _Paths.SIGN_UP,
@@ -85,11 +94,6 @@ class AppPages {
       name: _Paths.SIGN_IN_ENTER_CODE,
       page: () => const SignInEnterCodeView(),
       binding: SignInEnterCodeBinding(),
-    ),
-    GetPage(
-      name: _Paths.SIGN_UP,
-      page: () => const SignUpView(),
-      binding: SignUpBinding(),
     ),
     GetPage(
       name: _Paths.FORGOT_PASSWORD,
@@ -192,14 +196,14 @@ class AppPages {
       binding: AddPlayerByQrcodeBinding(),
     ),
     GetPage(
-      name: _Paths.SPLASH,
-      page: () => const SplashView(),
-      binding: SplashBinding(),
+      name: _Paths.CUSTOM_BOTTOM_BAR,
+      page: () => const CustomBottomBarView(),
+      binding: CustomBottomBarBinding(),
     ),
     GetPage(
-      name: _Paths.SELECT_WHO_YOU_ARE,
-      page: () => const SelectWhoYouAreView(),
-      binding: SelectWhoYouAreBinding(),
+      name: _Paths.ACTIVITYS,
+      page: () => const ActivitysView(),
+      binding: ActivitysBinding(),
     ),
   ];
 }

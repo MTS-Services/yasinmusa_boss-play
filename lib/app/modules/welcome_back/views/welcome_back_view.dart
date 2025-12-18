@@ -8,6 +8,7 @@ import 'package:yasinmusa/app/data/app_text_styles.dart';
 import 'package:yasinmusa/app/data/image_path.dart';
 import 'package:yasinmusa/app/modules/common_widgets/custom_app_bar.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/welcome_back_controller.dart';
 
 class WelcomeBackView extends GetView<WelcomeBackController> {
@@ -42,11 +43,21 @@ class WelcomeBackView extends GetView<WelcomeBackController> {
                       ],
                     ),
                     Spacer(),
-                    Image.asset(ImagePath.locationOnerProfile, scale: 3.4),
+                    GestureDetector(
+                      onTap: () {
+                        Get.toNamed(Routes.PROFILE);
+                      },
+                      child: Image.asset(
+                        ImagePath.locationOnerProfile,
+                        scale: 3.4,
+                      ),
+                    ),
                     SizedBox(width: 4.w),
                     buildIconWidget(
                       icon: Icons.notifications_none,
-                      onTap: () {},
+                      onTap: () {
+                        Get.toNamed(Routes.NOTIFICATIONS);
+                      },
                       iconSize: 12,
                     ),
                   ],
@@ -73,7 +84,12 @@ class WelcomeBackView extends GetView<WelcomeBackController> {
                       ),
                       child: Row(
                         children: [
-                          buildIconWidget(icon: Icons.add, onTap: () {}),
+                          buildIconWidget(
+                            icon: Icons.add,
+                            onTap: () {
+                              Get.toNamed(Routes.ADD_PLAYER_BY_QRCODE);
+                            },
+                          ),
                           SizedBox(width: 8.w),
                           Expanded(
                             child: Column(
@@ -150,66 +166,65 @@ class WelcomeBackView extends GetView<WelcomeBackController> {
             ),
 
             SliverList(
-              delegate: SliverChildBuilderDelegate(
-                    (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                    child: DecoratedBox(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: Color(0xFF252525),
+              delegate: SliverChildBuilderDelegate((context, index) {
+                return Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 8,
+                  ),
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Color(0xFF252525),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 12.w,
+                        vertical: 16.h,
                       ),
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 12.w,
-                          vertical: 16.h,
-                        ),
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Create New Session',
-                                    style: AppTextStyles.medium16.copyWith(
-                                      color: AppColors.whiteColor,
-                                    ),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Create New Session',
+                                  style: AppTextStyles.medium16.copyWith(
+                                    color: AppColors.whiteColor,
                                   ),
-                                  Text(
-                                    'Start a new game and invite your friends',
-                                    overflow: TextOverflow.ellipsis,
-                                    maxLines: 1,
-                                    style: AppTextStyles.regular12.copyWith(
-                                      color: AppColors.whiteColor,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            DecoratedBox(
-                              decoration: BoxDecoration(
-                                color: Colors.white.withAlpha(80),
-                                borderRadius: BorderRadius.circular(4),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(4.0),
-                                child: Text(
-                                  '5 min ago',
-                                  style: AppTextStyles.regular10,
                                 ),
+                                Text(
+                                  'Start a new game and invite your friends',
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 1,
+                                  style: AppTextStyles.regular12.copyWith(
+                                    color: AppColors.whiteColor,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          DecoratedBox(
+                            decoration: BoxDecoration(
+                              color: Colors.white.withAlpha(80),
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: Text(
+                                '5 min ago',
+                                style: AppTextStyles.regular10,
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
-                  );
-                },
-                childCount: 5,
-              ),
+                  ),
+                );
+              }, childCount: 5),
             ),
-
           ],
         ),
       ),

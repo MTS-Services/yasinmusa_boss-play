@@ -30,6 +30,8 @@ abstract class Routes {
   static const SESSION_LOBBY_TWO = _Paths.SESSION_LOBBY_TWO;
   static const SPLASH = _Paths.SPLASH;
   static const SELECT_WHO_YOU_ARE = _Paths.SELECT_WHO_YOU_ARE;
+  static const CUSTOM_BOTTOM_BAR = _Paths.CUSTOM_BOTTOM_BAR;
+  static const ACTIVITYS = _Paths.ACTIVITYS;
 }
 
 abstract class _Paths {
@@ -61,4 +63,6 @@ abstract class _Paths {
   static const SESSION_LOBBY_TWO = '/session-lobby-two';
   static const SPLASH = '/splash';
   static const SELECT_WHO_YOU_ARE = '/select-who-you-are';
+  static const CUSTOM_BOTTOM_BAR = '/custom-bottom-bar';
+  static const ACTIVITYS = '/activitys';
 }

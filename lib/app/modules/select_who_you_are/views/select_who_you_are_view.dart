@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:yasinmusa/app/data/app_colors.dart';
 import 'package:yasinmusa/app/data/app_text_styles.dart';
 import 'package:yasinmusa/app/data/image_path.dart';
+import 'package:yasinmusa/app/routes/app_pages.dart';
 
 import '../controllers/select_who_you_are_controller.dart';
 
@@ -35,19 +36,22 @@ class SelectWhoYouAreView extends GetView<SelectWhoYouAreController> {
                     Text('Select who you are?',style: AppTextStyles.bold20,),
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 16.h),
-                      child: SizedBox(width: double.infinity,child: ElevatedButton(onPressed: (){}, child: Text('Customer'))),
+                      child: SizedBox(width: double.infinity,child: ElevatedButton(onPressed: (){
+                        Get.toNamed(Routes.SIGN_IN);
+                      }, child: Text('Customer'))),
                     ),
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.toNamed(Routes.RESTAURANT_INFO);
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.primaryColor,
                         ),
                         child: Text('Location Owner'),
                       ),
-                    )
-                    ,
+                    ),
                   ],
                 ),
               ),

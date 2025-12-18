@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:yasinmusa/app/data/app_text_styles.dart';
 import 'package:yasinmusa/app/modules/common_widgets/custom_app_bar.dart';
+import 'package:yasinmusa/app/routes/app_pages.dart';
 import '../controllers/registration_play_game_controller.dart';
 
 class RegistrationPlayGameView extends GetView<RegistrationPlayGameController> {
@@ -84,7 +85,9 @@ class RegistrationPlayGameView extends GetView<RegistrationPlayGameController> {
                   SizedBox(height: 15.h),
                   SizedBox(
                       width: double.infinity,
-                      child: ElevatedButton(onPressed: (){}, child: Text('Join Session')))
+                      child: ElevatedButton(onPressed: (){
+                        Get.toNamed(Routes.WAITING_PERSON_FOR_GAME);
+                      }, child: Text('Join Session')))
                 ],
               ),
             ),

@@ -7,6 +7,7 @@ import 'package:yasinmusa/app/data/app_text_styles.dart';
 import 'package:yasinmusa/app/data/image_path.dart';
 import 'package:yasinmusa/app/modules/common_widgets/custom_app_bar.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/will_pay_controller.dart';
 
 class WillPayView extends GetView<WillPayController> {
@@ -41,7 +42,9 @@ class WillPayView extends GetView<WillPayController> {
             SizedBox(height: 24.h),
 
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Get.offAllNamed(Routes.SESSION_LOBBY);
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.snowPinkColor,
               ),
@@ -62,7 +65,7 @@ class WillPayView extends GetView<WillPayController> {
             SizedBox(height: 17.h),
 
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () => Get.toNamed(Routes.SESSION_LOBBY_TWO),
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.secondaryColor,
               ),

@@ -49,7 +49,7 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
                         child: ElevatedButton(
 
                             onPressed: (){
-                              Get.toNamed(Routes.ENTER_NEW_PASSWORD);
+                              Get.toNamed(Routes.FORGOT_ENTER_CODE);
                             }, child: Text('Send code')),
                       )
                     ],

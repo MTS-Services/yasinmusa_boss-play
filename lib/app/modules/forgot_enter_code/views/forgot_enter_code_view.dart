@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:yasinmusa/app/data/app_colors.dart';
 import 'package:yasinmusa/app/data/app_text_styles.dart';
+import 'package:yasinmusa/app/routes/app_pages.dart';
 
 import '../controllers/forgot_enter_code_controller.dart';
 
@@ -89,7 +90,9 @@ class ForgotEnterCodeView extends GetView<ForgotEnterCodeController> {
                           SizedBox(
                             width: double.infinity,
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Get.toNamed(Routes.ENTER_NEW_PASSWORD);
+                              },
                               child: Text('Next'),
                             ),
                           ),

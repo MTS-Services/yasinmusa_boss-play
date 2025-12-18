@@ -6,6 +6,7 @@ import 'package:yasinmusa/app/data/app_text_styles.dart';
 import 'package:yasinmusa/app/data/image_path.dart';
 import 'package:yasinmusa/app/modules/common_widgets/custom_app_bar.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/add_player_by_qrcode_controller.dart';
 
 class AddPlayerByQrcodeView extends GetView<AddPlayerByQrcodeController> {
@@ -105,7 +106,9 @@ class AddPlayerByQrcodeView extends GetView<AddPlayerByQrcodeController> {
                   SizedBox(height: 18.h,),
                   SizedBox(
                     width: double.infinity,
-                      child: ElevatedButton(onPressed: (){}, child: Text('Start the Game'))),
+                      child: ElevatedButton(onPressed: (){
+                        Get.toNamed(Routes.REGISTRATION_PLAY_GAME);
+                      }, child: Text('Start the Game'))),
                   SizedBox(height: 8.h,),
                 ],
               ),

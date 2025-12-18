@@ -5,6 +5,7 @@ import 'package:yasinmusa/app/data/app_colors.dart';
 import 'package:yasinmusa/app/data/app_text_styles.dart';
 import 'package:yasinmusa/app/data/image_path.dart';
 import 'package:yasinmusa/app/modules/common_widgets/custom_app_bar.dart';
+import 'package:yasinmusa/app/routes/app_pages.dart';
 
 import '../controllers/waiting_person_for_game_controller.dart';
 
@@ -33,16 +34,17 @@ class WaitingPersonForGameView extends GetView<WaitingPersonForGameController> {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed(Routes.SESSION_LOBBY);
+                      },
                       child: Text('Start the game'),
                     ),
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(height: 20),
                 ],
               ),
             ),
           ),
-
         ],
       ),
     );

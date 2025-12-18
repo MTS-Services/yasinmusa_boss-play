@@ -7,11 +7,14 @@ import '../../../data/app_colors.dart';
 import '../controllers/splash_controller.dart';
 
 class SplashView extends GetView<SplashController> {
-  const SplashView({super.key});
+ const SplashView({super.key});
+  @override
+
   @override
   Widget build(BuildContext context) {
-    final SplashController controller = Get.put(SplashController());
+    Get.find<SplashController>();
     return Scaffold(
+      backgroundColor: AppColors.blackColor,
       body: Center(
         child: Text(
           'Boss Pays',

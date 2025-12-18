@@ -39,5 +39,8 @@ class ImagePath {
   static const String frameIcon = '$baseUrl/Frame 5 (2).png';
   static const String logOut = '$baseUrl/logout-04.png';
   static const String mail = '$baseUrl/mail.png';
+  static const String home = '$baseUrl/homeIcon.png';
+  static const String personIcon = '$baseUrl/personIcon.png';
+  static const String activityIcon = '$baseUrl/activityIcon.png';
 
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
+import 'package:yasinmusa/app/routes/app_pages.dart';
 
 import '../../../data/app_colors.dart';
 import '../../../data/app_text_styles.dart';
@@ -59,6 +60,10 @@ class SessionLobbyTwoView extends GetView<SessionLobbyTwoController> {
                 text: "20%",
                 icon: Icons.radio_button_off,
               ),
+              SizedBox(height: 16.h,),
+              SizedBox(width: double.infinity,child: ElevatedButton(onPressed: (){
+                Get.offAllNamed(Routes.WELCOME_BACK);
+              }, child: Text('Payment')),),
             ],
           ),
         ),

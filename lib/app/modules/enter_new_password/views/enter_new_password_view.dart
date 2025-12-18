@@ -56,7 +56,7 @@ class EnterNewPasswordView extends GetView<EnterNewPasswordController> {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
-                        Get.toNamed(Routes.ENTER_NEW_PASSWORD);
+                        Get.toNamed(Routes.SIGN_IN);
                       },
                       child: Text('Save new password'),
                     ),
