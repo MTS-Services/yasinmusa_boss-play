@@ -1,13 +1,9 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
 import 'package:yasinmusa/app/data/app_text_styles.dart';
 import 'package:yasinmusa/app/modules/common_widgets/custom_app_bar.dart';
-
-import '../../../data/app_colors.dart';
 import '../controllers/edit_profile_controller.dart';
 
 class EditProfileView extends GetView<EditProfileController> {
@@ -42,7 +38,7 @@ class EditProfileView extends GetView<EditProfileController> {
                           ),
                         ),
                         SizedBox(height: 16.h),
-                        Text('Restaurant name', style: AppTextStyles.regular12),
+                        Text('Name', style: AppTextStyles.regular12),
                         SizedBox(height: 7.h),
                         TextFormField(
                           decoration: InputDecoration(
@@ -56,6 +52,14 @@ class EditProfileView extends GetView<EditProfileController> {
                           decoration: InputDecoration(
                             hintText: 'Enter location here',
                             suffixIcon: Icon(Icons.location_on_outlined),
+                          ),
+                        ),
+                        SizedBox(height: 16.h),
+                        Text('Age', style: AppTextStyles.regular12),
+                        SizedBox(height: 7.h),
+                        TextFormField(
+                          decoration: InputDecoration(
+                            hintText: '32',
                           ),
                         ),
                         SizedBox(height: 40.h),
@@ -116,8 +120,24 @@ class EditProfileView extends GetView<EditProfileController> {
                           width: double.infinity,
                           child: ElevatedButton(
                             onPressed: () {},
-                            child: Text('Update'),
+                            child: Text('Save'),
                           ),
+                        ),
+                        SizedBox(
+                          height: 16.h,
+                        ),
+                        SizedBox(
+                          width: double.infinity,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color(0xFF252525)
+                            ),
+                            onPressed: () {},
+                            child: Text('Cancel'),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 32.h,
                         ),
                       ],
                     ),
