@@ -4,6 +4,8 @@ import '../modules/activitys/bindings/activitys_binding.dart';
 import '../modules/activitys/views/activitys_view.dart';
 import '../modules/add_player_by_qrcode/bindings/add_player_by_qrcode_binding.dart';
 import '../modules/add_player_by_qrcode/views/add_player_by_qrcode_view.dart';
+import '../modules/change_sound/bindings/change_sound_binding.dart';
+import '../modules/change_sound/views/change_sound_view.dart';
 import '../modules/custom_bottom_bar/bindings/custom_bottom_bar_binding.dart';
 import '../modules/custom_bottom_bar/views/custom_bottom_bar_view.dart';
 import '../modules/edit_profile/bindings/edit_profile_binding.dart';
@@ -204,6 +206,11 @@ class AppPages {
       name: _Paths.ACTIVITYS,
       page: () => const ActivitysView(),
       binding: ActivitysBinding(),
+    ),
+    GetPage(
+      name: _Paths.CHANGE_SOUND,
+      page: () => const ChangeSoundView(),
+      binding: ChangeSoundBinding(),
     ),
   ];
 }

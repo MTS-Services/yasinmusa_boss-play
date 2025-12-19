@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:yasinmusa/app/data/app_colors.dart';
 import 'package:yasinmusa/app/data/app_text_styles.dart';
 import 'package:yasinmusa/app/modules/common_widgets/custom_app_bar.dart';
 import '../controllers/edit_profile_controller.dart';
@@ -130,7 +131,7 @@ class EditProfileView extends GetView<EditProfileController> {
                           width: double.infinity,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xFF252525)
+                              backgroundColor: AppColors.primaryColor,
                             ),
                             onPressed: () {},
                             child: Text('Cancel'),

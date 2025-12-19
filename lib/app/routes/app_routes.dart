@@ -32,6 +32,7 @@ abstract class Routes {
   static const SELECT_WHO_YOU_ARE = _Paths.SELECT_WHO_YOU_ARE;
   static const CUSTOM_BOTTOM_BAR = _Paths.CUSTOM_BOTTOM_BAR;
   static const ACTIVITYS = _Paths.ACTIVITYS;
+  static const CHANGE_SOUND = _Paths.CHANGE_SOUND;
 }
 
 abstract class _Paths {
@@ -65,4 +66,5 @@ abstract class _Paths {
   static const SELECT_WHO_YOU_ARE = '/select-who-you-are';
   static const CUSTOM_BOTTOM_BAR = '/custom-bottom-bar';
   static const ACTIVITYS = '/activitys';
+  static const CHANGE_SOUND = '/change-sound';
 }

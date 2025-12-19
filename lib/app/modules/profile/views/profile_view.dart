@@ -64,7 +64,7 @@ class ProfileView extends GetView<ProfileController> {
                     title: 'Sounds',
                     icon: ImagePath.sounds,
                     onTap: () {
-                      Get.toNamed(Routes.SIGN_IN);
+                      Get.toNamed(Routes.CHANGE_SOUND);
                     },
                   ),
                   buildDecoratedBox(
