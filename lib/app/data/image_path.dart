@@ -37,11 +37,17 @@ class ImagePath {
   static const String dollerIcon = '$baseUrl/dollerIcon.png';
   static const String card = '$baseUrl/card.png';
   static const String frameIcon = '$baseUrl/Frame 5 (2).png';
-  static const String logOut = '$baseUrl/logout-04.png';
+  static const String logOutHome = '$baseUrl/logout-04.png';
   static const String mail = '$baseUrl/mail.png';
   static const String home = '$baseUrl/homeIcon.png';
   static const String personIcon = '$baseUrl/personIcon.png';
   static const String activityIcon = '$baseUrl/activityIcon.png';
   static const String appleLogo = '$baseUrl/apple_logo.png';
+  static const String account = '$baseUrl/account.png';
+  static const String helpSupport = '$baseUrl/help_support.png';
+  static const String logOut = '$baseUrl/log_out.png';
+  static const String privacyPolicy = '$baseUrl/privacy_policy.png';
+  static const String sounds = '$baseUrl/sounds.png';
+  static const String termsCondition = '$baseUrl/terms_condition.png';
 
 }

@@ -255,7 +255,7 @@ class WelcomeBackView extends GetView<WelcomeBackController> {
                   ),
                 ),
                 Spacer(),
-                Image.asset(ImagePath.logOut, scale: 4),
+                Image.asset(ImagePath.logOutHome, scale: 4),
               ],
             ),
             SizedBox(height: 40),

@@ -6,15 +6,13 @@ import 'package:yasinmusa/app/modules/session_lobby/views/session_lobby_view.dar
 class CustomBottomBarController extends GetxController {
   var selectIndex = 0.obs;
   final screens = [
-   const RestaurantInfoView(),
     RestaurantInfoView(),
-     SessionLobbyView(),
-    const ActivitysView(),
+    RestaurantInfoView(),
+    SessionLobbyView(),
+    ActivitysView(),
   ];
 
   void changeIndex(int index) {
     selectIndex.value = index;
   }
-
-
 }

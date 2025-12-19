@@ -1,13 +1,11 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
 import 'package:yasinmusa/app/data/app_text_styles.dart';
+import 'package:yasinmusa/app/data/image_path.dart';
 import 'package:yasinmusa/app/modules/common_widgets/custom_app_bar.dart';
 import 'package:yasinmusa/app/routes/app_pages.dart';
-
 import '../../../data/app_colors.dart';
 import '../controllers/profile_controller.dart';
 
@@ -23,35 +21,59 @@ class ProfileView extends GetView<ProfileController> {
           SliverToBoxAdapter(child: buildProfile()),
           SliverToBoxAdapter(
             child: Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 16,
-                vertical: 120,
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 spacing: 10,
                 children: [
                   Text(
-                    "Profile Information",
+                    "Settings",
                     style: AppTextStyles.regular24.copyWith(
                       color: Colors.white,
                     ),
                   ),
-                  buildDecoratedBox(title: 'Account', icon: Icons.perm_identity_rounded,onTap: (){
-                    Get.toNamed(Routes.EDIT_PROFILE);
-                  }),
-                  buildDecoratedBox(title: 'Privacy & Policy', icon: Icons.privacy_tip_outlined,onTap: (){
-                    Get.toNamed(Routes.PRIVACY_POLICY);
-                  }),
-                  buildDecoratedBox(title: 'Terms & Condition', icon: Icons.menu,onTap: (){
-                    Get.toNamed(Routes.TERMS_CONDITIONS);
-                  }),
-                  buildDecoratedBox(title: 'Help & Support', icon: Icons.headset_mic_outlined,onTap: (){
-                    Get.toNamed(Routes.HELP_SUPPORT);
-                  }),
-                  buildDecoratedBox(title: 'Log Out', icon: Icons.logout,onTap: (){
-                    Get.toNamed(Routes.SIGN_IN);
-                  }),
+                  buildDecoratedBox(
+                    title: 'Account',
+                    icon: ImagePath.account,
+                    onTap: () {
+                      Get.toNamed(Routes.EDIT_PROFILE);
+                    },
+                  ),
+                  buildDecoratedBox(
+                    title: 'Privacy & Policy',
+                    icon: ImagePath.privacyPolicy,
+                    onTap: () {
+                      Get.toNamed(Routes.PRIVACY_POLICY);
+                    },
+                  ),
+                  buildDecoratedBox(
+                    title: 'Terms & Condition',
+                    icon: ImagePath.termsCondition,
+                    onTap: () {
+                      Get.toNamed(Routes.TERMS_CONDITIONS);
+                    },
+                  ),
+                  buildDecoratedBox(
+                    title: 'Help & Support',
+                    icon: ImagePath.helpSupport,
+                    onTap: () {
+                      Get.toNamed(Routes.HELP_SUPPORT);
+                    },
+                  ),
+                  buildDecoratedBox(
+                    title: 'Sounds',
+                    icon: ImagePath.sounds,
+                    onTap: () {
+                      Get.toNamed(Routes.SIGN_IN);
+                    },
+                  ),
+                  buildDecoratedBox(
+                    title: 'Log Out',
+                    icon: ImagePath.logOut,
+                    onTap: () {
+                      Get.toNamed(Routes.SIGN_IN);
+                    },
+                  ),
                 ],
               ),
             ),
@@ -123,10 +145,10 @@ class ProfileView extends GetView<ProfileController> {
       ),
     );
   }
-  
+
   Widget buildDecoratedBox({
     required String title,
-    required IconData icon,
+    required String icon,
     VoidCallback? onTap,
   }) {
     return GestureDetector(
@@ -139,7 +161,7 @@ class ProfileView extends GetView<ProfileController> {
         child: SizedBox(
           width: double.infinity,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 17),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 17),
             child: Row(
               children: [
                 Text(
@@ -149,7 +171,7 @@ class ProfileView extends GetView<ProfileController> {
                   ),
                 ),
                 Spacer(),
-                Icon(icon, color: Colors.white),
+                Image.asset(icon, height: 24),
               ],
             ),
           ),
