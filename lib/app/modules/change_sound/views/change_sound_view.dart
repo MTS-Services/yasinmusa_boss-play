@@ -33,7 +33,6 @@ class ChangeSoundView extends GetView<ChangeSoundController> {
                 padding: EdgeInsets.zero,
                 itemBuilder: (context, index) {
                   final item = controller.options[index];
-
                   return Obx(
                     () => Padding(
                       padding: EdgeInsets.only(bottom: 12),

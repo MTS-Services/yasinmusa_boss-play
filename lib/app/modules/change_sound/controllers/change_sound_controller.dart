@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 class ChangeSoundController extends GetxController {
-  final RxList<String> options = <String>[
+  final List<String> options =[
     "SOUND-209",
     "SOUND-99",
     "SOUND-269",
@@ -11,11 +11,11 @@ class ChangeSoundController extends GetxController {
     "SOUND-460",
     "SOUND-71",
     "SOUND-185",
-  ].obs;
+  ];
 
-  var selectIndex = (0).obs;
+  var selectIndex = 0.obs;
 
   void changeSelected(int index){
-    selectIndex.value=index;
+    selectIndex.value = index;
   }
 }
