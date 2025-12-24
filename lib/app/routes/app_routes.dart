@@ -33,6 +33,8 @@ abstract class Routes {
   static const CUSTOM_BOTTOM_BAR = _Paths.CUSTOM_BOTTOM_BAR;
   static const ACTIVITYS = _Paths.ACTIVITYS;
   static const CHANGE_SOUND = _Paths.CHANGE_SOUND;
+  static const GENERATE_QR_CODE = _Paths.GENERATE_QR_CODE;
+  static const QR_SCANNER = _Paths.QR_SCANNER;
 }
 
 abstract class _Paths {
@@ -67,4 +69,6 @@ abstract class _Paths {
   static const CUSTOM_BOTTOM_BAR = '/custom-bottom-bar';
   static const ACTIVITYS = '/activitys';
   static const CHANGE_SOUND = '/change-sound';
+  static const GENERATE_QR_CODE = '/generate-qr-code';
+  static const QR_SCANNER = '/qr-scanner';
 }

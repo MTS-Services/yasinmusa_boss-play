@@ -49,7 +49,9 @@ class AddPlayerByQrcodeView extends GetView<AddPlayerByQrcodeController> {
                       SizedBox(
                         width: double.infinity,
                         child: OutlinedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.toNamed(Routes.WAITING_PERSON_FOR_GAME);
+                          },
                           style: OutlinedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(6),
@@ -81,7 +83,7 @@ class AddPlayerByQrcodeView extends GetView<AddPlayerByQrcodeController> {
                   child: SizedBox(
                     width: double.infinity,
                     height: 360,
-                    child: Image.asset(ImagePath.sessionLobbyBlueContainer),
+                    child: Image.asset(ImagePath.qrCode,color: Colors.white70,),
                   ),
                 ),
               ),
@@ -107,7 +109,7 @@ class AddPlayerByQrcodeView extends GetView<AddPlayerByQrcodeController> {
                   SizedBox(
                     width: double.infinity,
                       child: ElevatedButton(onPressed: (){
-                        Get.toNamed(Routes.REGISTRATION_PLAY_GAME);
+                        Get.toNamed(Routes.SESSION_LOBBY);
                       }, child: Text('Start the Game'))),
                   SizedBox(height: 8.h,),
                 ],

@@ -68,7 +68,7 @@ class SignInView extends GetView<SignInController> {
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {
-                          Get.offAllNamed(Routes.CUSTOM_BOTTOM_BAR);
+                         controller.onSignInSuccess();
                         },
                         child: Text('Sign In'),
                       ),
