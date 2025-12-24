@@ -1,13 +1,14 @@
 import 'package:get/get.dart';
 
-class WelcomeBackController extends GetxController {
-  bool joinSession = false;
+class GenerateQrCodeController extends GetxController {
+  //TODO: Implement GenerateQrCodeController
 
+  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
-    joinSession = Get.arguments?['joinSession'] ?? false;
   }
+
   @override
   void onReady() {
     super.onReady();
@@ -18,4 +19,5 @@ class WelcomeBackController extends GetxController {
     super.onClose();
   }
 
+  void increment() => count.value++;
 }
