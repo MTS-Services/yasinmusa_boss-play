@@ -7,6 +7,7 @@ import 'package:yasinmusa/app/data/app_text_styles.dart';
 import 'package:yasinmusa/app/data/image_path.dart';
 import 'package:yasinmusa/app/routes/app_pages.dart';
 
+import '../../../data/user_role.dart';
 import '../controllers/select_who_you_are_controller.dart';
 
 class SelectWhoYouAreView extends GetView<SelectWhoYouAreController> {
@@ -22,29 +23,34 @@ class SelectWhoYouAreView extends GetView<SelectWhoYouAreController> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image.asset(ImagePath.selectScreen),
-
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.w,vertical: 30.h),
-                margin: EdgeInsets.symmetric(horizontal: 16.w,),
+                padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 30.h),
+                margin: EdgeInsets.symmetric(horizontal: 16.w),
                 width: double.infinity,
                 decoration: BoxDecoration(
-                    color: AppColors.secondaryBlackColor,
+                  color: AppColors.secondaryBlackColor,
                   borderRadius: BorderRadius.circular(8.r),
                 ),
                 child: Column(
                   children: [
-                    Text('Select who you are?',style: AppTextStyles.bold20,),
+                    Text('Select who you are?', style: AppTextStyles.bold20),
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 16.h),
-                      child: SizedBox(width: double.infinity,child: ElevatedButton(onPressed: (){
-                        Get.toNamed(Routes.SIGN_IN);
-                      }, child: Text('Customer'))),
+                      child: SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Get.toNamed(Routes.SIGN_IN,arguments: UserRole.customer);
+                          },
+                          child: Text('Customer'),
+                        ),
+                      ),
                     ),
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {
-                          Get.toNamed(Routes.RESTAURANT_INFO);
+                          Get.toNamed(Routes.SIGN_IN,arguments: UserRole.owner);
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.primaryColor,

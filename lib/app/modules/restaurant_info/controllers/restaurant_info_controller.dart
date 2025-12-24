@@ -1,13 +1,7 @@
 import 'package:get/get.dart';
 
 class RestaurantInfoController extends GetxController {
-  //TODO: Implement RestaurantInfoController
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
   @override
   void onReady() {
@@ -19,5 +13,4 @@ class RestaurantInfoController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
 }
