@@ -54,7 +54,7 @@ class WelcomeBackView extends GetView<WelcomeBackController> {
                     ),
                     SizedBox(width: 4.w),
                     buildIconWidget(
-                      icon: Icons.notifications_none,
+                      child: Icon(Icons.notifications_none),
                       onTap: () {
                         Get.toNamed(Routes.NOTIFICATIONS);
                       },
@@ -70,52 +70,105 @@ class WelcomeBackView extends GetView<WelcomeBackController> {
                   horizontal: 16,
                   vertical: 12,
                 ),
-                child: SizedBox(
-                  width: double.infinity,
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: Colors.blue,
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 16.w,
-                        vertical: 16.h,
-                      ),
-                      child: Row(
-                        children: [
-                          buildIconWidget(
-                            icon: Icons.add,
-                            onTap: () {
-                              Get.toNamed(Routes.ADD_PLAYER_BY_QRCODE);
-                            },
+                child: Column(
+                  children: [
+                    SizedBox(
+                      width: double.infinity,
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Colors.blue,
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 16.w,
+                            vertical: 16.h,
                           ),
-                          SizedBox(width: 8.w),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Create New Session',
-                                  style: AppTextStyles.medium16.copyWith(
-                                    color: AppColors.whiteColor,
-                                  ),
+                          child: Row(
+                            children: [
+                              buildIconWidget(
+                                child: Icon(Icons.add,),
+                                onTap: () {
+                                  Get.toNamed(Routes.ADD_PLAYER_BY_QRCODE);
+                                },
+                              ),
+                              SizedBox(width: 8.w),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Create New Session',
+                                      style: AppTextStyles.medium16.copyWith(
+                                        color: AppColors.whiteColor,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Start a new game and invite your friends',
+                                      overflow: TextOverflow.ellipsis,
+                                      maxLines: 1,
+                                      style: AppTextStyles.regular12.copyWith(
+                                        color: AppColors.whiteColor,
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                                Text(
-                                  'Start a new game and invite your friends',
-                                  overflow: TextOverflow.ellipsis,
-                                  maxLines: 1,
-                                  style: AppTextStyles.regular12.copyWith(
-                                    color: AppColors.whiteColor,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 8.h,),
+                    if (!controller.joinSession)
+                      SizedBox(
+                        width: double.infinity,
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: AppColors.secondaryColor,
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 16.w,
+                              vertical: 16.h,
+                            ),
+                            child: Row(
+                              children: [
+                                buildIconWidget(
+                                  child: Icon(Icons.qr_code),
+                                  onTap: () {
+                                    Get.toNamed(Routes.QR_SCANNER);
+                                  },
+                                ),
+                                SizedBox(width: 8.w),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Join Session',
+                                        style: AppTextStyles.medium16.copyWith(
+                                          color: AppColors.whiteColor,
+                                        ),
+                                      ),
+                                      Text(
+                                        'Join a session by scan QR code',
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: AppTextStyles.regular12.copyWith(
+                                          color: AppColors.whiteColor,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ],
                             ),
                           ),
-                        ],
+                        ),
                       ),
-                    ),
-                  ),
+                  ],
                 ),
               ),
             ),
@@ -267,7 +320,7 @@ class WelcomeBackView extends GetView<WelcomeBackController> {
   }
 
   Widget buildIconWidget({
-    required IconData icon,
+    required Widget child,
     VoidCallback? onTap,
     double? iconSize,
   }) {
@@ -278,7 +331,8 @@ class WelcomeBackView extends GetView<WelcomeBackController> {
       ),
       child: IconButton(
         onPressed: onTap,
-        icon: Icon(icon, color: Colors.white, size: 22),
+        iconSize:  iconSize ?? 22,
+        icon: child,
       ),
     );
   }
