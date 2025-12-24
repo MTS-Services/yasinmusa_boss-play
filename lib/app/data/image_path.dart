@@ -49,5 +49,7 @@ class ImagePath {
   static const String privacyPolicy = '$baseUrl/privacy_policy.png';
   static const String sounds = '$baseUrl/sounds.png';
   static const String termsCondition = '$baseUrl/terms_condition.png';
+  static const String qrCode = '$baseUrl/qr_code.png';
+  static const String qrIcon = '$baseUrl/qrIcon.png';
 
 }

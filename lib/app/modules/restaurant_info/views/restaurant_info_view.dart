@@ -76,7 +76,7 @@ class RestaurantInfoView extends GetView<RestaurantInfoController> {
                         SizedBox(
                           width: double.infinity,
                             child: ElevatedButton(onPressed: (){
-                              Get.toNamed(Routes.WELCOME_BACK);
+                              Get.toNamed(Routes.CUSTOM_BOTTOM_BAR,arguments: {'joinSession':true});
                             }, child: Text('Confirm')))
                       ],
                     ),
