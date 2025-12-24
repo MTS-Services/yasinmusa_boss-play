@@ -20,6 +20,8 @@ import '../modules/game_play/bindings/game_play_binding.dart';
 import '../modules/game_play/views/game_play_view.dart';
 import '../modules/game_result/bindings/game_result_binding.dart';
 import '../modules/game_result/views/game_result_view.dart';
+import '../modules/generate_qr_code/bindings/generate_qr_code_binding.dart';
+import '../modules/generate_qr_code/views/generate_qr_code_view.dart';
 import '../modules/help_support/bindings/help_support_binding.dart';
 import '../modules/help_support/views/help_support_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -30,6 +32,8 @@ import '../modules/privacy_policy/bindings/privacy_policy_binding.dart';
 import '../modules/privacy_policy/views/privacy_policy_view.dart';
 import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
+import '../modules/qr_scanner/bindings/qr_scanner_binding.dart';
+import '../modules/qr_scanner/views/qr_scanner_view.dart';
 import '../modules/rating/bindings/rating_binding.dart';
 import '../modules/rating/views/rating_view.dart';
 import '../modules/registration_play_game/bindings/registration_play_game_binding.dart';
@@ -198,10 +202,14 @@ class AppPages {
       binding: AddPlayerByQrcodeBinding(),
     ),
     GetPage(
-      name: _Paths.CUSTOM_BOTTOM_BAR,
-      page: () => const CustomBottomBarView(),
-      binding: CustomBottomBarBinding(),
-    ),
+        name: _Paths.CUSTOM_BOTTOM_BAR,
+        page: () => const CustomBottomBarView(),
+        bindings: [
+          CustomBottomBarBinding(),
+          WelcomeBackBinding(),
+          NotificationsBinding(),
+          ProfileBinding()
+        ]),
     GetPage(
       name: _Paths.ACTIVITYS,
       page: () => const ActivitysView(),
@@ -211,6 +219,16 @@ class AppPages {
       name: _Paths.CHANGE_SOUND,
       page: () => const ChangeSoundView(),
       binding: ChangeSoundBinding(),
+    ),
+    GetPage(
+      name: _Paths.GENERATE_QR_CODE,
+      page: () => const GenerateQrCodeView(),
+      binding: GenerateQrCodeBinding(),
+    ),
+    GetPage(
+      name: _Paths.QR_SCANNER,
+      page: () => const QrScannerView(),
+      binding: QrScannerBinding(),
     ),
   ];
 }
